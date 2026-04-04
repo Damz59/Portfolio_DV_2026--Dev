@@ -1,5 +1,13 @@
-<app-header></app-header>
-<main id="main" class="container">
-  <router-outlet />
-</main>
-  
+<!-- Wrapper global : permet de coller le footer en bas de page -->
+<div class="app-shell">
+	<!-- Header global -->
+	<app-header></app-header>
+
+	<!-- Contenu principal : prend l’espace restant -->
+	<main id="main" class="app-main container">
+		<router-outlet></router-outlet>
+	</main>
+
+	<!-- Footer global : visible sur toutes les pages -->
+	<app-footer></app-footer>
+</div>
