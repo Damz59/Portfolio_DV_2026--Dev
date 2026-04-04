@@ -1,0 +1,25 @@
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<header class="site-header" role="banner">
+	<div class="container header__inner">
+		<a class="brand" routerLink="/" aria-label="Accueil">
+			<span class="brand__name">Damien Vandendorpe</span>
+		</a>
+
+		<input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+		<label class="nav-toggle-btn" for="nav-toggle">
+			<span class="nav-toggle-btn__icon" aria-hidden="true"></span>
+			<span class="sr-only">Ouvrir / fermer le menu</span>
+		</label>
+
+		<nav class="nav" id="primary-nav" aria-label="Navigation principale">
+			<ul class="nav__list">
+				<a class="nav__link" routerLink="/" (click)="closeMenu()" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
+				<a class="nav__link" routerLink="/projects" (click)="closeMenu()" routerLinkActive="is-active">Projets</a>
+				<a class="nav__link" routerLink="/a-propos" (click)="closeMenu()" routerLinkActive="is-active">À propos</a>
+				<a class="nav__link" routerLink="/contact" (click)="closeMenu()" routerLinkActive="is-active">Contact</a>
+			</ul>
+		</nav>
+	</div>
+</header>
