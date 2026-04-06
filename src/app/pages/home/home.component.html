@@ -1,1 +1,54 @@
-<p>home works!</p>
+<!-- HERO : titre principal de la page -->
+<section class="home-hero" aria-labelledby="homeTitle">
+	<div class="container-fluid home-container">
+		<div class="row align-items-center g-4">
+			<!-- Colonne texte -->
+			<div class="col-12 col-md-8">
+				<p class="home-kicker mb-2">Développeur web</p>
+				<h1 id="homeTitle" class="home-title">Damien Vandendorpe</h1>
+				<p class="home-subtitle">Je conçois des interfaces web claires, performantes et accessibles.</p>
+
+				<!-- CTA : appels à l’action -->
+				<div class="home-cta">
+					<button class="btn btn-primary" routerLink="/projects">Voir mes projets</button>
+					<a class="btn btn-outline-light" href="assets/CV_DV.pdf" target="_blank" rel="noopener noreferrer">Télécharger le CV</a>
+				</div>
+			</div>
+
+			<!-- Colonne logos (à droite du texte) -->
+			<div class="col-12 col-md-4 text-center text-md-end">
+				<div class="home-hero-logos">
+					<img src="assets/AngularJsPortfolio.png" alt="Logo Angular Portfolio" class="home-hero-logo home-hero-logo--angular" />
+					<img src="assets/Logo_DV.png" alt="Logo DV" class="home-hero-logo" />
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- INTRO : portrait + texte -->
+<section class="home-intro my-5">
+	<div class="container-fluid home-container">
+		<div class="row g-4 align-items-center">
+			<!-- Colonne portrait -->
+			<div class="col-12 col-md-4 text-center">
+				<img src="assets/Portrait.JPG" alt="Portrait de Damien Vandendorpe" class="img-fluid rounded-circle shadow home-portrait" />
+			</div>
+
+			<!-- Colonne texte -->
+			<div class="col-12 col-md-8">
+				<h2 class="fw-bold mb-2">Je suis Damien Vandendorpe, développeur full‑stack</h2>
+				<p class="fw-light h5 mb-3">Bienvenue dans mon univers créatif</p>
+
+				<p class="home-text mb-4">
+					Développeur passionné depuis l’adolescence, j’ai découvert la programmation par curiosité et par goût de la création. Si mon parcours professionnel m’a d’abord conduit vers le domaine de l’électricité, avec une spécialisation en courant faible, je n’ai jamais cessé de nourrir mon intérêt pour l’informatique. En 2017, résolu à suivre ma vocation, j’ai obtenu le titre professionnel de Technicien d'assistance en informatique. Cette étape a marqué un tournant décisif, en m’ouvrant les portes du développement : un univers dans lequel je m’épanouis pleinement et où chaque nouvel apprentissage constitue une source d’enthousiasme. Aujourd’hui, je suis déterminé à faire de cette passion le socle d’une carrière solide et stimulante.
+				</p>
+
+				<div class="d-flex flex-wrap gap-2">
+					<button class="btn btn-gradient" routerLink="/skills">Mon expertise</button>
+					<button class="btn btn-outline-secondary" routerLink="/contact">Me contacter</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

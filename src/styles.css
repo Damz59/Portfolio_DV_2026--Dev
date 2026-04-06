@@ -1,2 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 @import "bootstrap-icons/font/bootstrap-icons.css";
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+app-root,
+.app-shell {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-header,
+.site-footer {
+    width: 100%;
+    max-width: none;
+}

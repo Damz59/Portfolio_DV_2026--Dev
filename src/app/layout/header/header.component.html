@@ -1,24 +1,31 @@
+<!-- 1) Lien d’évitement : accès rapide au contenu principal -->
 <a class="skip-link" href="#main">Aller au contenu</a>
 
+<!-- 2) Header global -->
 <header class="site-header" role="banner">
-	<div class="container header__inner">
+	<div class="container-fluid header__inner">
+		<!-- 3) Brand -->
 		<a class="brand" routerLink="/" aria-label="Accueil">
 			<span class="brand__name">Damien Vandendorpe</span>
 		</a>
 
+		<!-- 4) Checkbox d’état (CSS-only) : ouverte/fermée -->
 		<input type="checkbox" id="nav-toggle" class="nav-toggle" />
 
+		<!-- 4) Bouton burger (label) : clique = coche/décoche -->
 		<label class="nav-toggle-btn" for="nav-toggle">
 			<span class="nav-toggle-btn__icon" aria-hidden="true"></span>
 			<span class="sr-only">Ouvrir / fermer le menu</span>
 		</label>
 
+		<!-- 5) Navigation principale -->
 		<nav class="nav" id="primary-nav" aria-label="Navigation principale">
 			<ul class="nav__list">
-				<a class="nav__link" routerLink="/" (click)="closeMenu()" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
-				<a class="nav__link" routerLink="/projects" (click)="closeMenu()" routerLinkActive="is-active">Projets</a>
-				<a class="nav__link" routerLink="/about" (click)="closeMenu()" routerLinkActive="is-active">À propos</a>
-				<a class="nav__link" routerLink="/contact" (click)="closeMenu()" routerLinkActive="is-active">Contact</a>
+				<li class="nav__item"><a class="nav__link" routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a></li>
+				<li class="nav__item"><a class="nav__link" routerLink="/projects" routerLinkActive="is-active">Projets</a></li>
+				<li class="nav__item"><a class="nav__link" routerLink="/skills" routerLinkActive="is-active">Compétences</a></li>
+				<li class="nav__item"><a class="nav__link" routerLink="/about" routerLinkActive="is-active">À propos</a></li>
+				<li class="nav__item"><a class="nav__link" routerLink="/contact" routerLinkActive="is-active">Contact</a></li>
 			</ul>
 		</nav>
 	</div>

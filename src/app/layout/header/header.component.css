@@ -57,8 +57,8 @@
 	background: linear-gradient(90deg, var(--bg1), var(--bg2));
 	color: var(--text);
 
-	position: sticky;
-	top: 0;
+	/* Important : sert de référence au menu mobile en position absolute */
+	position: relative;
 	z-index: 1000;
 }
 
@@ -189,22 +189,30 @@
 /* ========== Responsive (mobile) ========== */
 
 @media (max-width: 760px) {
-
-	/* En mobile : on affiche le bouton burger */
+	/* En mobile : on affiche le burger */
 	.nav-toggle-btn {
 		display: inline-flex;
 	}
 
 	/*
-		En mobile : on cache la nav par défaut.
-		Elle apparaîtra seulement si la checkbox est cochée.
+		Option recommandée : menu qui POUSSE le contenu (pas d’overlay)
+		But : quand le burger est ouvert, le Home commence sous le menu (pas en dessous avec superposition).
+		Principe : en mobile, la nav redevient "dans le flux" (position: static) et le header passe en layout colonne.
 	*/
+	.header__inner {
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	/* La nav occupe toute la largeur sous la ligne brand/burger */
 	.nav {
 		display: none;
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 64px;
+		position: static;
+		width: 100%;
+
+		/* Espace entre la ligne brand/burger et le menu */
+		margin-top: 12px;
+
 		background: linear-gradient(90deg, var(--bg1), var(--bg2));
 		border-top: 1px solid var(--border);
 		padding: 12px 0;
@@ -218,23 +226,7 @@
 	}
 
 	/* Ouverture : si la checkbox est cochée, on affiche la nav */
-	.nav-toggle:checked~.nav {
+	.nav-toggle:checked ~ .nav {
 		display: block;
-	}
-
-	/* (2.3) Quand le menu est ouvert : on transforme l’icône burger en “X” */
-	.nav-toggle:checked+.nav-toggle-btn .nav-toggle-btn__icon {
-		background: transparent;
-		/* on cache la barre du milieu */
-	}
-
-	.nav-toggle:checked+.nav-toggle-btn .nav-toggle-btn__icon::before {
-		top: 0;
-		transform: rotate(45deg);
-	}
-
-	.nav-toggle:checked+.nav-toggle-btn .nav-toggle-btn__icon::after {
-		top: 0;
-		transform: rotate(-45deg);
 	}
 }
