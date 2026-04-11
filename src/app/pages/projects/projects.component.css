@@ -1,0 +1,99 @@
+:host {
+	/* Fond global (même que Skills) */
+	background: linear-gradient(180deg, #e2e8f0 0%, #bfdbfe 100%);
+	min-height: 100vh;
+}
+
+/* ===================================================== */
+/* Effet “Arc-en-ciel” sur le bouton En savoir plus       */
+/* ===================================================== */
+.btn-rainbow-underline {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	z-index: 0;
+	overflow: hidden;
+}
+
+.btn-rainbow-underline::after {
+	content: "";
+	position: absolute;
+	left: 12px;
+	right: 12px;
+	bottom: 8px;
+	height: 3px;
+	background: linear-gradient(110deg, #e1f549, #29d0be, #6cb8ea, #ff5959);
+	z-index: -1;
+	border-radius: 999px;
+	transition: height .25s cubic-bezier(.6, 0, .4, 1);
+}
+
+.btn-rainbow-underline:hover::after,
+.btn-rainbow-underline:focus-visible::after {
+	height: 10px;
+}
+
+.btn-rainbow-underline:focus-visible {
+	outline: 2px solid rgba(99, 102, 241, 0.6);
+	outline-offset: 3px;
+}
+
+/* ===================================================== */
+/* (Détails média déplacés dans ProjectA1)                */
+/* ===================================================== */
+
+.projects-cards-carousel {
+	/* Grille principale : flèche | contenu | flèche */
+	display: grid;
+	grid-template-columns: 44px 1fr 44px;
+	gap: 12px;
+	align-items: stretch;
+}
+
+.projects-cards-carousel__nav {
+	/* Boutons flèches : centrés dans leur colonne */
+	border: 0;
+	background: rgba(15, 23, 42, 0.08);
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.projects-cards-carousel__cards {
+	/* 3 cards dans le slide */
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 12px;
+}
+
+/* Titre de la card n°1 (même dégradé bleu que Skills) */
+.projects-card__header {
+	color: #f8fafc;
+	font-weight: 900;
+	background: linear-gradient(135deg, #0b1220 0%, #0f172a 45%, #1d4ed8 100%);
+	border-bottom: 1px solid rgba(56, 189, 248, 0.18);
+}
+
+.card-img-top {
+	/* Harmonise la hauteur des images (utile pour Raspberry) */
+	height: 170px;
+	object-fit: cover;
+}
+
+@media (max-width: 992px) {
+	/* Tablette : 2 cards */
+	.projects-cards-carousel__cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 576px) {
+	/* Mobile : 1 card (et colonnes flèches un peu plus petites) */
+	.projects-cards-carousel {
+		grid-template-columns: 40px 1fr 40px;
+	}
+	.projects-cards-carousel__cards {
+		grid-template-columns: 1fr;
+	}
+}

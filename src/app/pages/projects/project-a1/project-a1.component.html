@@ -1,0 +1,175 @@
+<section class="projet-a1 py-5">
+	<div class="container">
+		<!-- Titre -->
+		<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+			<div>
+				<h2 class="mb-1">Serveur Web Full‑Stack (Raspberry Pi)</h2>
+				<p class="text-muted mb-0">
+					Projet Personnel — Mise en place d’un serveur web complet (React/Vite + PHP API + MariaDB + Apache2).
+				</p>
+			</div>
+
+			<a class="btn btn-gradient btn-rainbow-underline projet-a1__back" routerLink="/projects">
+				← Retour aux projets
+			</a>
+		</div>
+
+		<div class="row g-4">
+			<!-- Col gauche : résumé + stack -->
+			<div class="col-12 col-lg-5">
+				<div class="card shadow-sm">
+					<div class="card-header projet-a1__header">Résumé</div>
+					<img src="assets/ProjetA1/Raspberry_PI.jpg" class="card-img-top" alt="Raspberry Pi" />
+					<div class="card-body">
+						<p>
+							Transformer un Raspberry Pi en serveur web capable d’héberger une application front React (Vite),
+							une API PHP et une base MariaDB/MySQL, accessible via DuckDNS + HTTPS (Let’s Encrypt).
+						</p>
+
+						<h6 class="text-uppercase text-muted">Stack</h6>
+						<div class="d-flex align-items-center flex-wrap gap-2 mb-3" aria-label="Stack technique">
+							<img src="assets/Icones/Raspberry.svg" alt="Raspberry Pi" height="22" />
+							<img src="assets/Icones/React.svg" alt="React" height="22" />
+							<img src="assets/Icones/Vite.svg" alt="Vite" height="22" />
+							<img src="assets/Icones/PHP.svg" alt="PHP" height="22" />
+							<img src="assets/Icones/MariaDB.svg" alt="MariaDB" height="22" />
+							<img src="assets/Icones/Apache.svg" alt="Apache" height="22" />
+						</div>
+
+						<h6 class="text-uppercase text-muted">Matériel</h6>
+						<ul class="projet-a1__materials mb-0">
+							<li><strong>Raspberry Pi</strong> (Pi 4 / Pi 5 recommandé)</li>
+							<li><strong>Alimentation</strong> USB‑C</li>
+							<li><strong>Stockage</strong> microSD 32–64 Go (ou SSD optionnel)</li>
+							<li><strong>Boîtier ventilé</strong> + dissipateur/ventilateur</li>
+							<li><strong>Réseau</strong> Ethernet (recommandé) / Wi‑Fi</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Col droite : carrousel "média" -->
+			<div class="col-12 col-lg-7">
+				<!-- On garde h-100 pour aligner la hauteur avec la card de gauche -->
+				<div class="card shadow-sm h-100 projet-a1__steps-card">
+					<div class="card-header projet-a1__header">Étapes / Visuels</div>
+
+					<!-- Body spécial (flex) pour que le carousel prenne toute la hauteur restante -->
+					<div class="card-body projet-a1__steps-body">
+						<div
+							id="carousel-projet-a1"
+							class="carousel slide shadow projet-a1__carousel"
+							data-bs-ride="carousel"
+							data-bs-touch="true"
+						>
+							<div class="carousel-inner">
+								<!-- Slide 1 : Assemblage + overlay -->
+								<div class="carousel-item active" data-bs-interval="2500">
+									<div class="projects-media">
+										<img
+											src="assets/ProjetA1/Raspberry_Assemblage.jpg"
+											class="d-block w-100 project-a1-carousel__img"
+											alt="Raspberry Pi — Assemblage"
+										/>
+
+										<div class="projects-media__overlay">
+											<h6 class="projects-media__title">Matériel</h6>
+											<ul class="projects-media__list">
+												<li>Raspberry Pi (Pi 4 / Pi 5)</li>
+												<li>Alimentation USB‑C</li>
+												<li>microSD 32–64 Go</li>
+												<li>Boîtier ventilé + dissipateur</li>
+												<li>Ethernet / Wi‑Fi</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<!-- Slide 2 : DuckDNS (image + overlay) -->
+								<div class="carousel-item">
+									<div class="projects-media projects-media--duckdns">
+										<!-- Logo DuckDNS (mets ton fichier dans src/assets/Icones/) -->
+										<img src="assets/Icones/Duckdns.svg" class="d-block w-100 project-a1-carousel__img" alt="DuckDNS" />
+
+										<div class="projects-media__overlay">
+											<h6 class="projects-media__title">DuckDNS</h6>
+											<ul class="projects-media__list">
+												<li>DDNS gratuit (<code>.duckdns.org</code>)</li>
+												<li>Accès au serveur même si l’IP change</li>
+												<li>HTTPS (Let’s Encrypt) + redirection routeur</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<!-- Slide 3 : Setup (PHP / MariaDB / SSH / VNC) -->
+								<div class="carousel-item">
+									<div class="projects-media projects-media--setup">
+										<!-- Bloc 1 (liste) : reste dans l’overlay, en haut à gauche -->
+										<div class="projects-media__overlay">
+											<h6 class="projects-media__title">Installation / Accès</h6>
+
+											<ul class="projects-media__list">
+												<li><strong>SSH</strong> : connexion distante + sécurisation (clé, ports, firewall)</li>
+												<li><strong>PHP</strong> : installation + modules nécessaires + config Apache</li>
+												<li><strong>MariaDB</strong> : installation, users, droits, dump/restore</li>
+												<li><strong>VNC</strong> (bonus) : accès bureau à distance si besoin</li>
+												<li><strong>Box/Routeur</strong> : ouvrir/rediriger les ports <strong>80</strong> (HTTP) et <strong>443</strong> (HTTPS) vers le Raspberry</li>
+											</ul>
+										</div>
+
+										<!-- Bloc 2 (icônes) : séparé de l’overlay, centré au milieu -->
+										<div class="projet-a1__stack-wrap" aria-label="Stack installation">
+											<div class="projet-a1__stack">
+                                                <div class="projet-a1__stack-item">
+													<img src="assets/Icones/Raspberry.svg" alt="Raspbian" class="projet-a1__stack-icon" />
+													<div class="projet-a1__stack-label">Raspbian</div>
+												</div>
+
+												<div class="projet-a1__stack-plus" aria-hidden="true">=</div>
+												<div class="projet-a1__stack-item">
+													<img src="assets/Icones/PHP.svg" alt="PHP" class="projet-a1__stack-icon" />
+													<div class="projet-a1__stack-label">PHP</div>
+												</div>
+
+												<div class="projet-a1__stack-plus" aria-hidden="true">+</div>
+
+												<div class="projet-a1__stack-item">
+													<img src="assets/Icones/MariaDB.svg" alt="MariaDB" class="projet-a1__stack-icon" />
+													<div class="projet-a1__stack-label">MariaDB</div>
+												</div>
+
+												<div class="projet-a1__stack-plus" aria-hidden="true">+</div>
+
+												<div class="projet-a1__stack-item">
+													<img src="assets/Icones/SSH.svg" alt="SSH" class="projet-a1__stack-icon" />
+													<div class="projet-a1__stack-label">SSH</div>
+												</div>
+
+												<div class="projet-a1__stack-plus" aria-hidden="true">+</div>
+
+												<div class="projet-a1__stack-item">
+													<img src="assets/Icones/VNC.svg" alt="VNC" class="projet-a1__stack-icon" />
+													<div class="projet-a1__stack-label">VNC</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<button class="carousel-control-prev" type="button" data-bs-target="#carousel-projet-a1" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button class="carousel-control-next" type="button" data-bs-target="#carousel-projet-a1" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

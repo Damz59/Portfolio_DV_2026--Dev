@@ -1,1 +1,272 @@
-<p>skills works!</p>
+<!-- ===================================================== -->
+<!-- 1) HERO : en-tête de page                              -->
+<!--    - Titre + sous-titre                                -->
+<!-- ===================================================== -->
+<section class="skills-hero" aria-labelledby="skillsTitle">
+	<div class="container-fluid skills-container">
+		<p class="skills-kicker mb-2">Compétences</p>
+		<h1 id="skillsTitle" class="skills-title">Mon expertise</h1>
+		<p class="skills-subtitle">Un aperçu structuré de mes compétences en développement et en systèmes.</p>
+	</div>
+</section>
+
+<!-- ===================================================== -->
+<!-- 2) CONTENU : compétences                               -->
+<!--    - DEV en premier (grille 3 colonnes)                -->
+<!--    - Technicien + Électricité en toggles repliables    -->
+<!-- ===================================================== -->
+<section class="skills-content my-5">
+	<div class="container-fluid skills-container">
+		<div class="skills-section">
+			<h2 class="skills-section-title">Programmation & Développement</h2>
+			<p class="skills-section-subtitle">Mes compétences web & software (organisées en cartes).</p>
+
+			<!-- ===================================================== -->
+			<!-- Grille DEV en 3 colonnes                              -->
+			<!-- Col 1 : Langages & standards web                       -->
+			<!-- Col 2 : Frameworks (colonne centrale)                  -->
+			<!-- Col 3 : Front-end / Back-end / Base de données         -->
+			<!-- ===================================================== -->
+			<div class="skills-dev-layout">
+				<!-- ================================================= -->
+				<!-- Colonne 1 : Langages & standards web              -->
+				<!-- ================================================= -->
+				<article class="skills-card skills-card--languages" aria-labelledby="langTitle">
+					<h2 id="langTitle" class="skills-card__title">Langages & standards web</h2>
+					<ul class="skills-list">
+						<li>
+							<span class="skill-name"><strong>HTML5</strong></span>
+							<span class="skill-level skill-level--intermediate">Intermédiaire</span>
+							: intégration sémantique.
+							<ul class="skills-sublist">
+								<li><i>AFPA, OpenClassRooms, Grafikart</i></li>
+							</ul>
+						</li>
+						<li>
+							<span class="skill-name"><strong>CSS3</strong></span>
+							<span class="skill-level skill-level--intermediate">Intermédiaire</span>
+							: Flexbox/Grid, responsive.
+							<ul class="skills-sublist">
+								<li><i>AFPA, OpenClassRooms, Grafikart</i></li>
+							</ul>
+						</li>
+						<li>
+							<span class="skill-name"><strong>PHP</strong></span>
+							<span class="skill-level skill-level--beginner">Débutant</span>
+							: base.
+							<ul class="skills-sublist">
+								<li><i>OpenClassRooms, Autodidacte</i></li>
+							</ul>
+						</li>
+						<li>
+							<span class="skill-name"><strong>JavaScript</strong></span>
+							<span class="skill-level skill-level--intermediate">Intermédiaire</span>
+							: ES6.
+							<ul class="skills-sublist">
+								<li><i>AFPA, OpenClassRooms, Grafikart</i></li>
+							</ul>
+						</li>
+						<li>
+							<span class="skill-name"><strong>Dart</strong></span>
+							<span class="skill-level skill-level--discovery">Découverte</span>
+							: premiers pas.
+							<ul class="skills-sublist">
+								<li><i>Autodidacte</i></li>
+							</ul>
+						</li>
+						<li>
+							<span class="skill-name"><strong>C#</strong></span>
+							<span class="skill-level skill-level--beginner">Débutant</span>
+							: bases.
+							<ul class="skills-sublist">
+								<li><i>OpenClassRooms</i></li>
+							</ul>
+						</li>
+						<li>
+							<span class="skill-name"><strong>Java</strong></span>
+							<span class="skill-level skill-level--beginner">Débutant</span>
+							: bases + POO.
+							<ul class="skills-sublist">
+								<li><i>AFPA, OpenClassRooms</i></li>
+							</ul>
+						</li>
+						<li>
+							<span class="skill-name"><strong>Python</strong></span>
+							<span class="skill-level skill-level--beginner">Débutant</span>
+							: POO + IA (LM Studio).
+							<ul class="skills-sublist">
+								<li><i>OpenClassRooms, Autodidacte</i></li>
+							</ul>
+						</li>
+					</ul>
+				</article>
+
+				<!-- ================================================= -->
+				<!-- Colonne 2 : Frameworks (centrale)                 -->
+				<!-- ================================================= -->
+				<article class="skills-card skills-card--frameworks" aria-labelledby="fwTitle">
+					<h2 id="fwTitle" class="skills-card__title">Frameworks</h2>
+					<ul class="skills-list">
+						<li>
+							<span class="skill-name"><strong>Bootstrap</strong></span>
+							<span class="skill-level skill-level--intermediate">Intermédiaire</span>
+							: framework CSS, grille, composants, responsive.
+							<ul class="skills-sublist">
+								<li><i>AFPA, OpenClassRooms</i></li>
+							</ul>
+						</li>
+						<li>
+							<span class="skill-name"><strong>Angular</strong></span>
+							<span class="skill-level skill-level--intermediate">Intermédiaire</span>
+							: composants, routing, services (standalone).
+							<ul class="skills-sublist">
+								<li><i>AFPA, OpenClassRooms</i></li>
+							</ul>
+						</li>
+						<li>
+							<span class="skill-name"><strong>React (Vite)</strong></span>
+							<span class="skill-level skill-level--intermediate">Intermédiaire</span>
+							: composants, état, routing, build.
+							<ul class="skills-sublist">
+								<li><i>OpenClassRooms, Grafikart</i></li>
+							</ul>
+						</li>
+						<li>
+							<span class="skill-name"><strong>Django</strong></span>
+							<span class="skill-level skill-level--beginner">Débutant</span>
+							: bases + CRUD (initiation).
+							<ul class="skills-sublist">
+								<li><i>OpenClassRooms, Autodidacte</i></li>
+							</ul>
+						</li>
+						<li>
+							<span class="skill-name"><strong>Spring Boot / Spring Security</strong></span>
+							<span class="skill-level skill-level--beginner">Débutant</span>
+							: auth, rôles (débutant).
+							<ul class="skills-sublist">
+								<li><i>AFPA, OpenClassRooms</i></li>
+							</ul>
+						</li>
+					</ul>
+				</article>
+
+				<!-- ================================================= -->
+				<!-- Colonne 3 : Stack (Front / Back / Base de données) -->
+				<!-- ================================================= -->
+				<div class="skills-dev-stack">
+					<!-- Carte 1/3 : Front-end -->
+					<article class="skills-card" aria-labelledby="feTitle">
+						<h2 id="feTitle" class="skills-card__title">Front-end</h2>
+						<ul class="skills-list">
+							<li><span class="skill-name"><strong>React-Bootstrap</strong></span>
+							<span class="skill-level skill-level--beginner">Débutant</span>
+							: composants Bootstrap en React.
+							<ul class="skills-sublist">
+								<li><i>Autodidacte</i></li>
+							</ul></li>
+							<li><strong>HTML5 / CSS3</strong> : responsive, accessibilité.</li>
+							<li><strong>JavaScript</strong> : DOM, événements, fetch, async/await.</li>
+						</ul>
+					</article>
+
+					<!-- Carte 2/3 : Back-end -->
+					<article class="skills-card" aria-labelledby="beTitle">
+						<h2 id="beTitle" class="skills-card__title">Back-end</h2>
+						<ul class="skills-list">
+							<li>
+							<span class="skill-name"><strong>PHP</strong></span>
+							<span class="skill-level skill-level--beginner">Débutant</span>
+							: endpoints, validation, erreurs, CORS, CRUD (bases) + suite.
+							<ul class="skills-sublist">
+								<li><i>Autodidacte</i></li>
+							</ul>
+						</li>
+							<li><strong>Java</strong> : CRUD (bases), logique serveur.</li>
+							<li><span class="skill-name"><strong>Apache2</strong></span>
+							<span class="skill-level skill-level--beginner">Débutant</span>
+							: VirtualHost, réécriture SPA, HTTPS.
+							<ul class="skills-sublist">
+								<li><i>AFPA</i></li>
+								<li><i>Autodidacte</i></li>
+							</ul></li>
+							<li><span class="skill-name"><strong>API REST</strong></span>
+							<span class="skill-level skill-level--beginner">Débutant</span>
+							: routes, JSON, codes HTTP.
+							<ul class="skills-sublist">
+								<li><i>AFPA</i></li>
+								<li><i>Autodidacte</i></li>
+							</ul></li>
+						</ul>
+					</article>
+
+					<!-- Carte 3/3 : Base de données -->
+					<article class="skills-card" aria-labelledby="dbTitle">
+						<h2 id="dbTitle" class="skills-card__title">Base de données</h2>
+						<ul class="skills-list">
+							<li><span class="skill-name"><strong>MariaDB / MySQL</strong></span>
+							<span class="skill-level skill-level--beginner">Débutant</span>
+							: requêtes SQL, CRUD, jointures simples.
+							<ul class="skills-sublist">
+								<li><i>AFPA, OpenClassRooms</i></li>
+							</ul></li>
+							<li><span class="skill-name"><strong>Modélisation</strong></span>
+							<span class="skill-level skill-level--beginner">Débutant</span>
+							: MCD, puis tables, clés primaires / clés étrangères (bases).</li>
+							<li><strong>Outils</strong> : phpMyAdmin (bases), JMerise, Microsoft SQL Server Management Studio (SSMS).</li>
+						</ul>
+					</article>
+				</div>
+			</div>
+		</div>
+
+		<!-- ===================================================== -->
+		<!-- Toggle 1/2 : Technicien d’assistance informatique      -->
+		<!-- ===================================================== -->
+		<details class="skills-toggle">
+			<summary class="skills-toggle__summary">Technicien d’assistance informatique / Montage PC (cliquer pour afficher)</summary>
+			<div class="skills-toggle__content">
+				<div class="skills-grid skills-grid--two">
+					<!-- Carte technicien 1/2 : Montage & intégration -->
+					<article class="skills-card" aria-labelledby="pcBuildTitle">
+						<h2 id="pcBuildTitle" class="skills-card__title">Montage & intégration</h2>
+						<ul class="skills-list">
+							<li>Assemblage / OS / BIOS</li>
+						</ul>
+					</article>
+					<!-- Carte technicien 2/2 : Dépannage -->
+					<article class="skills-card" aria-labelledby="pcDiagTitle">
+						<h2 id="pcDiagTitle" class="skills-card__title">Dépannage</h2>
+						<ul class="skills-list">
+							<li>Diagnostic pannes</li>
+						</ul>
+					</article>
+				</div>
+			</div>
+		</details>
+
+		<!-- ===================================================== -->
+		<!-- Toggle 2/2 : Électricité                               -->
+		<!-- ===================================================== -->
+		<details class="skills-toggle">
+			<summary class="skills-toggle__summary">Électricité (cliquer pour afficher)</summary>
+			<div class="skills-toggle__content">
+				<div class="skills-grid">
+					<!-- Carte électricité 1/2 : Courant faible -->
+					<article class="skills-card" aria-labelledby="elecCfTitle">
+						<h2 id="elecCfTitle" class="skills-card__title">Courant faible</h2>
+						<ul class="skills-list">
+							<li>Contrôle d’accès, SSI, RJ45…</li>
+						</ul>
+					</article>
+					<!-- Carte électricité 2/2 : Courant fort -->
+					<article class="skills-card" aria-labelledby="elecCftTitle">
+						<h2 id="elecCftTitle" class="skills-card__title">Courant fort</h2>
+						<ul class="skills-list">
+							<li>Tableaux, éclairage, prises…</li>
+						</ul>
+					</article>
+				</div>
+			</div>
+		</details>
+	</div>
+</section>
