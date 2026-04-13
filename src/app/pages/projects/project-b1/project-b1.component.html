@@ -1,0 +1,91 @@
+<section class="projet-b1 py-5">
+	<div class="container">
+		<!-- Titre -->
+		<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+			<div>
+				<h2 class="mb-1">B1 — La SDBM</h2>
+				<p class="text-muted mb-0">Projet AFPA — Java + MariaDB/MySQL.</p>
+			</div>
+			<a class="btn btn-gradient btn-rainbow-underline projet-b1__back" routerLink="/projects">← Retour aux projets</a>
+		</div>
+
+		<div class="row g-4">
+			<!-- Col gauche : résumé -->
+			<div class="col-12 col-lg-5">
+				<div class="card shadow-sm">
+					<div class="card-header projet-b1__header">Résumé</div>
+					<img src="assets/ProjetB1/cover.jpg" class="card-img-top" alt="Projet B1 — La SDBM" />
+					<div class="card-body">
+						<p>
+							(à compléter) Présentation du besoin, objectifs, contexte AFPA.
+						</p>
+
+						<h6 class="text-uppercase text-muted">Stack</h6>
+						<div class="d-flex align-items-center flex-wrap gap-2 mb-3" aria-label="Stack technique">
+							<img src="assets/Icones/Java.svg" alt="Java" height="22" />
+							<img src="assets/Icones/MariaDB.svg" alt="MariaDB" height="22" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Col droite : carrousel -->
+			<div class="col-12 col-lg-7">
+				<div class="card shadow-sm h-100 projet-b1__steps-card">
+					<div class="card-header projet-b1__header">Étapes / Visuels</div>
+					<div class="card-body projet-b1__steps-body">
+						<div id="carousel-projet-b1" class="carousel slide shadow projet-b1__carousel" data-bs-ride="carousel" data-bs-touch="true">
+							<div class="carousel-inner">
+								<!-- Slide 1 -->
+								<div class="carousel-item active">
+									<div class="projects-media">
+										<img src="assets/ProjetB1/slide-1.jpg" class="d-block w-100 project-b1-carousel__img" alt="B1 — Slide 1" />
+										<div class="projects-media__overlay">
+											<h6 class="projects-media__title">(Titre slide 1)</h6>
+											<ul class="projects-media__list">
+												<li>(point 1)</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<!-- Slide 2 -->
+								<div class="carousel-item">
+									<div class="projects-media">
+										<img src="assets/ProjetB1/slide-2.jpg" class="d-block w-100 project-b1-carousel__img" alt="B1 — Slide 2" />
+									</div>
+								</div>
+
+								<!-- Slide 3 -->
+								<div class="carousel-item">
+									<div class="projects-media">
+										<img src="assets/ProjetB1/slide-3.jpg" class="d-block w-100 project-b1-carousel__img" alt="B1 — Slide 3" />
+									</div>
+								</div>
+							</div>
+
+							<button class="carousel-control-prev" type="button" data-bs-target="#carousel-projet-b1" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button class="carousel-control-next" type="button" data-bs-target="#carousel-projet-b1" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr class="my-5" />
+		<h3>À documenter</h3>
+		<ul class="mb-0">
+			<li>Contexte AFPA + cahier des charges</li>
+			<li>MCD/MLD + choix DB</li>
+			<li>Requêtes SQL + contraintes + index</li>
+			<li>Connexion Java (JDBC) + DAO</li>
+			<li>Captures + résultats</li>
+		</ul>
+	</div>
+</section>

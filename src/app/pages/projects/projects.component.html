@@ -72,7 +72,26 @@
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<div class="projects-cards-carousel__cards">
-							<div class="card"><div class="card-body"><h5 class="card-title mb-0">Projet 1</h5></div></div>
+							<div class="card">
+                            <div class="card-header projects-card__header">La SDBM</div>
+                                <img src="assets/ProjectB1/cover.jpg" class="card-img-top" alt="Projet La SDBM" />
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text">
+                                        Projet AFPA — (à compléter) application / sujet "SDBM" avec Java + MariaDB.
+                                    </p>
+
+                                    <div class="d-flex align-items-center flex-wrap gap-2 mb-3" aria-label="Stack technique">
+                                        <img src="assets/Icones/Angular.svg" alt="Angular" height="22" />
+                                        <img src="assets/Icones/Spring.svg" alt="SpringBoot" height="22" />
+                                        <img src="assets/Icones/Java.svg" alt="Java" height="22" />
+                                        <img src="assets/Icones/MariaDB.svg" alt="MariaDB" height="22" />
+                                    </div>
+
+                                    <a class="btn btn-gradient mt-auto btn-rainbow-underline" [routerLink]="['/projects/b1']">
+                                        Voir le projet
+                                    </a>
+                                </div>
+                            </div>
 							<div class="card"><div class="card-body"><h5 class="card-title mb-0">Projet 2</h5></div></div>
 							<div class="card"><div class="card-body"><h5 class="card-title mb-0">Projet 3</h5></div></div>
 						</div>

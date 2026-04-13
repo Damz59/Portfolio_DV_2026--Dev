@@ -1,0 +1,185 @@
+/* =====================================================================
+    1) Header des cards (bandeau en haut)
+    - Texte clair, gras, fond dégradé "dark → bleu"
+    - Petite bordure en bas pour séparer du contenu
+   ===================================================================== */
+.projet-b1__header {
+	/* Couleur du texte */
+	color: #f8fafc;
+
+	/* Donne du poids au titre */
+	font-weight: 900;
+
+	/* Dégradé (cohérent avec le style global du portfolio) */
+	background: linear-gradient(135deg, #0b1220 0%, #0f172a 45%, #1d4ed8 100%);
+
+	/* Séparation subtile entre header et body */
+	border-bottom: 1px solid rgba(56, 189, 248, 0.18);
+}
+
+/* =====================================================================
+    2) Bouton "Retour aux projets"
+    - Même style visuel que le header (cohérence)
+    - Bordure légère + petit boost au hover
+   ===================================================================== */
+.projet-b1__back {
+	/* Texte blanc */
+	color: #f8fafc;
+
+	/* Un peu moins gras que le header, mais toujours "CTA" */
+	font-weight: 800;
+
+	/* Dégradé identique au header */
+	background: linear-gradient(135deg, #0b1220 0%, #0f172a 45%, #1d4ed8 100%);
+
+	/* Bordure légèrement bleutée */
+	border: 1px solid rgba(56, 189, 248, 0.22);
+}
+
+/* Hover : léger éclaircissement */
+.projet-b1__back:hover {
+	color: #f8fafc;
+	filter: brightness(1.05);
+}
+
+/* =====================================================================
+    3) Card "Étapes / Visuels" en layout flex (colonne)
+    Objectif : éviter le "vide" et forcer le body à prendre la hauteur
+    restante, pour que le carousel puisse être full height.
+   ===================================================================== */
+.projet-b1__steps-card {
+	/* La card devient un conteneur flex en colonne */
+	display: flex;
+	flex-direction: column;
+}
+
+.projet-b1__steps-body {
+	/* Prend l'espace restant sous le header */
+	flex: 1;
+
+	/* Permet au carousel à l'intérieur de grandir verticalement */
+	display: flex;
+	flex-direction: column;
+
+	/* Important pour que les enfants flex puissent "shrink" correctement */
+	min-height: 0;
+}
+
+/* =====================================================================
+    4) Carousel en pleine hauteur
+    - On veut que le carousel remplisse le body de la card.
+   ===================================================================== */
+.projet-b1__carousel {
+	/* Le carousel prend la place disponible dans le body */
+	flex: 1;
+
+	/* Idem : évite les comportements bizarres de hauteur en flex */
+	min-height: 0;
+}
+
+/* Les wrappers internes du carousel prennent 100% de la hauteur */
+.projet-b1__carousel .carousel-inner,
+.projet-b1__carousel .carousel-item {
+	height: 100%;
+}
+
+/* =====================================================================
+    5) Conteneur média (image + overlay)
+    - Position relative pour pouvoir placer l’overlay en absolute.
+   ===================================================================== */
+.projects-media {
+	position: relative;
+	height: 100%;
+}
+
+/* =====================================================================
+    6) Image du carousel
+    - Toujours remplir le cadre
+    - Crop propre via object-fit: cover
+   ===================================================================== */
+.project-b1-carousel__img {
+	/* Remplit le conteneur */
+	width: 100%;
+	height: 100%;
+
+	/* Recadrage propre sans déformation */
+	object-fit: cover;
+
+	/* Centre le point d’intérêt */
+	object-position: 50% 50%;
+
+	/* Évite les petits espaces inline des images */
+	display: block;
+}
+
+/* Sécurité : on désactive toute limite de hauteur qui pourrait venir d'ailleurs */
+.projet-b1__carousel img {
+	max-height: none;
+}
+
+/* =====================================================================
+    7) Overlay (texte par-dessus l’image)
+    - Boîte sombre translucide + blur
+    - Padding + arrondis + ombre
+   ===================================================================== */
+.projects-media__overlay {
+	/* Se place au-dessus de l’image */
+	position: absolute;
+
+	/* Position "coin haut gauche" avec marges */
+	left: 12px;
+	top: 4px;
+
+	/* Empêche de dépasser sur petits écrans */
+	max-width: calc(100% - 24px);
+
+	/* Confort de lecture */
+	padding: 10px 12px;
+	border-radius: 12px;
+
+	/* Fond sombre transparent */
+	background: rgba(2, 6, 23, 0.72);
+
+	/* Effet "verre dépoli" (selon support navigateur) */
+	backdrop-filter: blur(4px);
+
+	/* Texte clair */
+	color: #f8fafc;
+
+	/* L’overlay ressort sur l’image */
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Titre de l’overlay : style compact, "label" */
+.projects-media__title {
+	margin: 0 0 6px 0;
+	font-size: 0.85rem;
+	font-weight: 800;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: rgba(248, 250, 252, 0.9);
+}
+
+/* Liste de points dans l’overlay */
+.projects-media__list {
+	margin: 0;
+	padding-left: 18px;
+	font-size: 0.9rem;
+	line-height: 1.25;
+}
+
+/* =====================================================================
+    8) Responsive (mobile)
+    - Overlay un peu plus compact
+    - Texte un peu plus petit
+   ===================================================================== */
+@media (max-width: 576px) {
+	.projects-media__overlay {
+		left: 8px;
+		top: 4px;
+		padding: 8px 10px;
+	}
+	.projects-media__list {
+		font-size: 0.85rem;
+	}
+}
