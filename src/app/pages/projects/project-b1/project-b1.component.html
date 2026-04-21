@@ -14,16 +14,46 @@
 			<div class="col-12 col-lg-5">
 				<div class="card shadow-sm">
 					<div class="card-header projet-b1__header">Résumé</div>
-					<img src="assets/ProjetB1/cover.jpg" class="card-img-top" alt="Projet B1 — La SDBM" />
+					<img src="assets/ProjetB1/SDBM_chopes.png" class="card-img-top" alt="Projet B1 — La SDBM" />
+
 					<div class="card-body">
-						<p>
-							(à compléter) Présentation du besoin, objectifs, contexte AFPA.
-						</p>
+						<div class="mb-3">
+							<h6 class="text-uppercase text-muted mb-2">Contexte</h6>
+							<p class="mb-0">
+								La <strong>Société de Distribution des Bières du Monde (SDBM)</strong> souhaite informatiser son activité de vente de bières.
+								Elle demande une proposition pour la mise en place d’une base de données répondant aux besoins ci-dessous.
+							</p>
+						</div>
+
+						<div class="mb-3">
+							<h6 class="text-uppercase text-muted mb-2">Référentiel bières (classification)</h6>
+						</div>
+
+						<div class="mb-3">
+							<h6 class="text-uppercase text-muted mb-2">Recherche multi-critères + CRUD</h6>
+						</div>
+
+						<div class="mb-3">
+							<h6 class="text-uppercase text-muted mb-2">Vente : tickets & lignes</h6>
+						</div>
+
+						<div>
+							<h6 class="text-uppercase text-muted mb-2">Règles de prix</h6>
+						</div>
+
+						<br />
 
 						<h6 class="text-uppercase text-muted">Stack</h6>
-						<div class="d-flex align-items-center flex-wrap gap-2 mb-3" aria-label="Stack technique">
-							<img src="assets/Icones/Java.svg" alt="Java" height="22" />
-							<img src="assets/Icones/MariaDB.svg" alt="MariaDB" height="22" />
+						<div class="d-flex align-items-center flex-wrap gap-2 mb-3 stack-icons" aria-label="Stack technique">
+							<img class="stack-icon" src="assets/Icones/Angular.svg" alt="Angular" />
+							<span class="stack-plus" aria-hidden="true">+</span>
+							<span class="stack-paren" aria-hidden="true">(</span>
+							<img class="stack-icon" src="assets/Icones/Spring.svg" alt="Spring Boot" />
+							<span class="stack-plus" aria-hidden="true">+</span>
+							<img class="stack-icon" src="assets/Icones/Java.svg" alt="Java" />
+							<span class="stack-paren" aria-hidden="true">)</span>
+							<span class="stack-plus" aria-hidden="true">+</span>
+							<img class="stack-icon" src="assets/Icones/MariaDB.svg" alt="MariaDB" />
 						</div>
 					</div>
 				</div>
@@ -33,59 +63,150 @@
 			<div class="col-12 col-lg-7">
 				<div class="card shadow-sm h-100 projet-b1__steps-card">
 					<div class="card-header projet-b1__header">Étapes / Visuels</div>
+
 					<div class="card-body projet-b1__steps-body">
-						<div id="carousel-projet-b1" class="carousel slide shadow projet-b1__carousel" data-bs-ride="carousel" data-bs-touch="true">
+						<div
+							id="carousel-projet-b1"
+							class="carousel slide shadow projet-b1__carousel"
+							data-bs-ride="carousel"
+							data-bs-touch="true"
+						>
 							<div class="carousel-inner">
 								<!-- Slide 1 -->
 								<div class="carousel-item active">
 									<div class="projects-media">
-										<img src="assets/ProjetB1/slide-1.jpg" class="d-block w-100 project-b1-carousel__img" alt="B1 — Slide 1" />
+										<img
+											src="assets/ProjetB1/SDBM_Cover.png"
+											class="d-block w-100 project-b1-carousel__img"
+											alt="B1 — Slide 1"
+										/>
 										<div class="projects-media__overlay">
-											<h6 class="projects-media__title">(Titre slide 1)</h6>
+											<h6 class="projects-media__title">La SDBM</h6>
 											<ul class="projects-media__list">
-												<li>(point 1)</li>
+												<li>Toutes les bières du monde à portée de clic !</li>
+												<li><i>l'abus d'alcool est dangereux pour la santé !</i></li>
 											</ul>
 										</div>
 									</div>
 								</div>
 
-								<!-- Slide 2 -->
+								<!-- Slide 2 — Base de données / PhpMyAdmin -->
 								<div class="carousel-item">
 									<div class="projects-media">
-										<img src="assets/ProjetB1/slide-2.jpg" class="d-block w-100 project-b1-carousel__img" alt="B1 — Slide 2" />
+										<img
+											src="assets/ProjetB1/background_BDD.png"
+											class="d-block w-100 project-b1-carousel__img"
+											alt="B1 — Base de données SDBM (background)"
+										/>
+										<div class="projects-media__overlay projects-media__overlay--center">
+											<h6 class="projects-media__title">Base de données SDBM — Conception & implémentation</h6>
+											<ul class="projects-media__list">
+												<li>Conception d’une base complète à partir d’un existant phpMyAdmin (dump XAMPP/MariaDB).</li>
+												<li>Modélisation : articles/bières, marques, fabricants, couleurs, types, pays, continents + tickets/lignes.</li>
+												<li>Règles : recherche multi-critères, calcul prix (marge + TVA), unicité “1 bière = 1 ligne” par ticket.</li>
+												<li>Implémentation SQL Server : PK/FK, CASCADE/SET NULL/NO ACTION, contraintes UNIQUE/CHECK.</li>
+												<li>Vue de calcul HT/TTC + numérotation “sans trous” + tests (INSERT).</li>
+											</ul>
+										</div>
 									</div>
 								</div>
 
-								<!-- Slide 3 -->
+								<!-- Slide 3 — Back-end Spring Boot / Java -->
 								<div class="carousel-item">
 									<div class="projects-media">
-										<img src="assets/ProjetB1/slide-3.jpg" class="d-block w-100 project-b1-carousel__img" alt="B1 — Slide 3" />
+										<img
+											src="assets/ProjetB1/Background_Backend.png"
+											class="d-block w-100 project-b1-carousel__img"
+											alt="Back-end Java / Spring Boot"
+										/>
+										<div class="projects-media__overlay projects-media__overlay--center">
+											<h6 class="projects-media__title">Back-end — Java + Spring Boot</h6>
+											<ul class="projects-media__list">
+												<li>Structure : <strong>Controller → Service → Repository → MariaDB</strong></li>
+												<li>Config : <strong>application.properties</strong> (XAMPP/MariaDB, JPA <strong>validate</strong>)</li>
+												<li>API REST : endpoints stables + <strong>ResponseEntity</strong></li>
+												<li>Recherche : <strong>Specifications</strong> + <strong>/api/article/search</strong></li>
+												<li>Contrat : <strong>DTO</strong> + <strong>Mapper</strong> (Entity ↔ DTO)</li>
+											</ul>
+											<p class="mb-0" style="font-size: 0.85rem; opacity: 0.9;">
+												<strong>GET /api/article/all</strong> • <strong>/id/&#123;id&#125;</strong> • <strong>/volumes</strong> • <strong>/search</strong>
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<!-- Slide 4 — Frontend Angular -->
+								<div class="carousel-item">
+									<div class="projects-media">
+										<img
+											src="assets/ProjetB1/Background_Angular.png"
+											class="d-block w-100 project-b1-carousel__img"
+											alt="B1 — Slide 4"
+										/>
+										<div class="projects-media__overlay projects-media__overlay--center">
+											<h6 class="projects-media__title">Front-end — Angular (SPA)</h6>
+											<ul class="projects-media__list">
+												<li>Initialisation : <strong>Angular CLI</strong> (sans SSR) + <strong>routing</strong> + composants standalone.</li>
+												<li>Pages : <strong>Home</strong> + <strong>Read</strong>.</li>
+												<li>Composants métier : <strong>filtres</strong> + recherche par <strong>ID</strong>.</li>
+												<li>Service HTTP : appels API vers <strong>Spring Boot</strong>.</li>
+												<li>UI : <strong>Bootstrap</strong> + gestion loading/erreurs.</li>
+											</ul>
+											<p class="mb-0" style="font-size: 0.85rem; opacity: 0.9;">
+												Dev : <strong>ng serve</strong> — App : <strong>localhost:4200</strong>
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<!-- Slide 5 — Ressource (cours & tutos) -->
+								<div class="carousel-item">
+									<div class="projects-media projects-media--slide5">
+										<img
+											src="assets/ProjetB1/emoji-damien.png"
+											class="d-block w-100 project-b1-carousel__img project-b1-carousel__img--contain"
+											alt="Ressources SDBM — cours et tutoriels"
+										/>
+
+										<!-- WRAPPER plein écran qui positionne le cadre en bas -->
+										<div class="slide5-overlay-wrap">
+											<div class="projects-media__overlay slide5-overlay">
+												<h6 class="projects-media__title">Le code étape par étape</h6>
+												<ul class="projects-media__list">
+													<li>Construction base de données</li>
+													<li>Le backend (<strong>Spring Boot + Java</strong>)</li>
+													<li>Le frontend (<strong>Angular + Bootstrap</strong>)</li>
+												</ul>
+												<p class="mb-0" style="font-size: 0.9rem; opacity: 0.95;">
+													Disponible sur
+													<a href="https://damienvdh59250.duckdns.org" target="_blank" rel="noopener noreferrer">
+														https://damienvdh59250.duckdns.org
+													</a>
+													dans la rubrique <strong>“Cours et tutoriels”</strong> (inscription gratuite et nécessaire).
+												</p>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
+							<!-- /carousel-inner -->
 
 							<button class="carousel-control-prev" type="button" data-bs-target="#carousel-projet-b1" data-bs-slide="prev">
 								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 								<span class="visually-hidden">Previous</span>
 							</button>
+
 							<button class="carousel-control-next" type="button" data-bs-target="#carousel-projet-b1" data-bs-slide="next">
 								<span class="carousel-control-next-icon" aria-hidden="true"></span>
 								<span class="visually-hidden">Next</span>
 							</button>
 						</div>
+						<!-- /carousel -->
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<hr class="my-5" />
-		<h3>À documenter</h3>
-		<ul class="mb-0">
-			<li>Contexte AFPA + cahier des charges</li>
-			<li>MCD/MLD + choix DB</li>
-			<li>Requêtes SQL + contraintes + index</li>
-			<li>Connexion Java (JDBC) + DAO</li>
-			<li>Captures + résultats</li>
-		</ul>
 	</div>
 </section>
