@@ -1,227 +1,287 @@
-/* ===================================================== */
-/* Projet A1 — project-a1.component.css                  */
-/* Objectifs :                                            */
-/* 1) Garder les headers de cards en dégradé             */
-/* 2) Éviter le grand vide en bas de la card Étapes      */
-/*    (la card est en h-100 => elle s'étire)             */
-/* 3) Faire en sorte que le carousel remplisse la hauteur*/
-/*    restante sous le header (avec images en cover)     */
-/* ===================================================== */
-
-/* ===================================================== */
-/* CSS global (structure de page + carousel + overlay)    */
-/* ===================================================== */
-
-/* Header (même dégradé bleu que tes cards) */
-.projet-a1__header {
-	color: #f8fafc;
-	font-weight: 900;
-	background: linear-gradient(135deg, #0b1220 0%, #0f172a 45%, #1d4ed8 100%);
-	border-bottom: 1px solid rgba(56, 189, 248, 0.18);
+/* =====================================================================
+   A1 — Header / bouton
+======================================================================== */
+.projet-a1__header{
+	color:#f8fafc;
+	font-weight:900;
+	background:linear-gradient(135deg,#0b1220 0%,#0f172a 45%,#1d4ed8 100%);
+	border-bottom:1px solid rgba(56,189,248,0.18);
+}
+.projet-a1__back{
+	color:#f8fafc;
+	font-weight:800;
+	background:linear-gradient(135deg,#0b1220 0%,#0f172a 45%,#1d4ed8 100%);
+	border:1px solid rgba(56,189,248,0.22);
+}
+.projet-a1__back:hover{
+	color:#f8fafc;
+	filter:brightness(1.05);
 }
 
-/* Matériel (liste) */
-.projet-a1__materials {
-	padding-left: 18px;
-	margin: 0;
+/* =====================================================================
+   A1 — Card steps (carousel full height)
+======================================================================== */
+.projet-a1__steps-card{
+	display:flex;
+	flex-direction:column;
 }
-
-/* Card Étapes/Visuels : supprimer le "vide" */
-.projet-a1__steps-card {
-	display: flex;          /* card = colonne */
-	flex-direction: column; /* header en haut, body en dessous */
+.projet-a1__steps-body{
+	flex:1;
+	display:flex;
+	flex-direction:column;
+	min-height:0;
 }
-
-/* Le body prend toute la hauteur restante sous le header */
-.projet-a1__steps-body {
-	flex: 1;                /* prend l'espace restant */
-	display: flex;
-	flex-direction: column;
-	min-height: 0;          /* essentiel pour que le flex calcule correctement */
-	/* Option : padding par défaut Bootstrap déjà présent dans .card-body
-	   si tu veux réduire l'espace autour du carousel :
-	   padding: 12px;
-	*/
+.projet-a1__carousel{
+	flex:1;
+	min-height:0;
 }
-
-/* Bouton retour */
-.projet-a1__back {
-	color: #f8fafc;
-	font-weight: 800;
-	background: linear-gradient(135deg, #0b1220 0%, #0f172a 45%, #1d4ed8 100%);
-	border: 1px solid rgba(56, 189, 248, 0.22);
-}
-
-.projet-a1__back:hover {
-	color: #f8fafc;
-	filter: brightness(1.05);
-}
-
-/* Carousel : prend toute la hauteur dispo */
-.projet-a1__carousel {
-	flex: 1;        /* prend toute la hauteur du body */
-	min-height: 0;  /* essentiel */
-}
-
-/* Les conteneurs internes du carousel prennent 100% */
 .projet-a1__carousel .carousel-inner,
-.projet-a1__carousel .carousel-item {
-	height: 100%;
+.projet-a1__carousel .carousel-item{
+	height:100%;
 }
 
-/* Slides "media" : conteneur overlay + image */
-.projects-media {
-	position: relative;
-	height: 100%; /* important : suit la hauteur du carousel-item */
+/* =====================================================================
+   Media wrapper (mobile-first)
+   - Sur mobile : image puis (icônes) puis overlay
+======================================================================== */
+.projects-media{
+	display:flex;
+	flex-direction:column;
+	height:auto;
 }
 
-/* Images : cover + centrées + prennent toute la hauteur */
-.project-a1-carousel__img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	object-position: 50% 50%;
-	display: block;
+/* =====================================================================
+   Images classiques (si tu en as encore ailleurs)
+======================================================================== */
+.project-a1-carousel__img{
+	width:100%;
+	height:auto;
+	object-fit:cover;
+	object-position:50% 50%;
+	display:block;
 }
 
-/* ⚠️ Important : ne pas brider les images, sinon vide */
-.projet-a1__carousel img {
-	max-height: none;
+/* Sécurité */
+.projet-a1__carousel img{
+	max-height:none;
 }
 
-/* Overlay sur image / fond */
-.projects-media__overlay {
-	position: absolute;
-	left: 12px;
-	top: 4px;
-	max-width: calc(100% - 24px);
-	padding: 10px 12px;
-	border-radius: 12px;
-	background: rgba(2, 6, 23, 0.72);
-	backdrop-filter: blur(4px);
-	color: #f8fafc;
-	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+/* (Optionnel) si tu veux une variante contain pour certains visuels */
+.project-a1-carousel__img--contain{
+	object-fit:contain;
+	background:rgba(2,6,23,0.35);
 }
 
-.projects-media__title {
-	margin: 0 0 6px 0;
-	font-size: 0.85rem;
-	font-weight: 800;
-	letter-spacing: 0.04em;
-	text-transform: uppercase;
-	color: rgba(248, 250, 252, 0.9);
+/* =====================================================================
+   Fond type Slide 2 (utilisé sur Slide 1/2/3)
+   -> ton HTML utilise <img class="duckdns-bg" ...>
+======================================================================== */
+.duckdns-bg{
+	width:100%;
+	height:auto; /* mobile-first */
+	display:block;
+	object-fit:cover;
+	background:#0b1220; /* fallback si jamais */
 }
 
-.projects-media__list {
-	margin: 0;
-	padding-left: 18px;
-	font-size: 0.9rem;
-	line-height: 1.25;
+/* Canard DuckDNS (Slide 2 uniquement) */
+.duckdns-duck{
+	display:none; /* caché par défaut, ré-affiché en desktop + mobile via media query */
 }
 
-/* Responsive : overlay plus compact */
-@media (max-width: 576px) {
-	.projects-media__overlay {
-		left: 8px;
-		top: 4px;
-		padding: 8px 10px;
+/* =====================================================================
+   Overlay (mobile-first) : SOUS l'image
+======================================================================== */
+.projects-media__overlay{
+	position:static;
+	width:100%;
+	max-width:100%;
+	margin:0;
+	padding:10px 12px;
+	border-radius:0 0 12px 12px;
+	background:rgba(2,6,23,0.72);
+	backdrop-filter:blur(4px);
+	color:#f8fafc;
+	box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* variantes (mobile) */
+.projects-media__overlay--center,
+.projects-media__overlay--bottom{
+	transform:none;
+	width:100%;
+	text-align:left;
+}
+
+/* Titre / liste */
+.projects-media__title{
+	margin:0 0 6px 0;
+	font-size:0.85rem;
+	font-weight:800;
+	letter-spacing:0.04em;
+	text-transform:uppercase;
+	color:rgba(248,250,252,0.9);
+}
+.projects-media__list{
+	margin:0;
+	padding-left:18px;
+	font-size:0.9rem;
+	line-height:1.25;
+}
+
+/* =====================================================================
+   Slide 3 : barre d’icônes en ligne (comme dans résumé)
+======================================================================== */
+.projet-a1__stack-inline{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	gap:10px;
+	padding:10px 12px;
+	background:rgba(2,6,23,0.55);
+	color:#f8fafc;
+	border-top:1px solid rgba(56,189,248,0.12);
+	border-bottom:1px solid rgba(56,189,248,0.12);
+}
+.projet-a1__stack-inline img{
+	height:26px;
+	width:auto;
+	display:block;
+}
+.projet-a1__stack-sep{
+	font-weight:900;
+	opacity:0.75;
+	font-size:22px;
+	line-height:1;
+}
+
+/* =====================================================================
+   Desktop ≥ 760px : même hauteur pour Slide 1/2/3 (référence Slide 2)
+   - Le conteneur prend 100% de la hauteur du carousel
+   - Le fond (.duckdns-bg) remplit toute la slide en absolute
+   - L’overlay repasse par-dessus (absolute)
+======================================================================== */
+@media (min-width: 760px){
+	.projects-media{
+		position:relative;
+		display:block;
+		height:100%;
+		overflow:hidden;
 	}
-	.projects-media__list {
-		font-size: 0.85rem;
+
+	/* Le fond remplit toute la slide */
+	.duckdns-bg{
+		position:absolute;
+		inset:0;
+		width:100%;
+		height:100%;
+		object-fit:cover;
+	}
+
+	/* Voile sombre léger pour lisibilité (sur toutes les slides) */
+	.projects-media::before{
+		content:"";
+		position:absolute;
+		inset:0;
+		background:rgba(2,6,23,.25);
+		pointer-events:none;
+	}
+
+	/* overlay redevient absolute */
+	.projects-media__overlay{
+		position:absolute;
+		left:12px;
+		top:4px;
+		width:auto;
+		max-width:calc(100% - 24px);
+		border-radius:12px;
+		z-index:2;
+	}
+
+	.projects-media__overlay--center{
+		left:50%;
+		top:50%;
+		transform:translate(-50%, -50%);
+		text-align:center;
+		width:min(560px, calc(100% - 24px));
+	}
+
+	.projects-media__overlay--bottom{
+		left:50%;
+		top:auto;
+		bottom:16px;
+		transform:translateX(-50%);
+		text-align:center;
+		width:min(560px, calc(100% - 24px));
+	}
+
+	/* Barre d'icônes (slide 3) en bas, au-dessus du fond */
+	.projet-a1__stack-inline{
+		position:absolute;
+		left:0;
+		right:0;
+		bottom:0;
+		border-top:0;
+		border-bottom:0;
+		z-index:2;
+	}
+
+	/* Si tu utilises a1-slide3-overlay : overlay un peu au-dessus des icônes */
+	.projects-media--setup .projects-media__overlay.a1-slide3-overlay{
+		top:auto;
+		bottom:58px; /* ajuste si besoin */
+		transform:translateX(-50%);
+	}
+
+	/* Slide 1 : overlay à droite (si tu as mis la classe a1-slide1-overlay-right en HTML) */
+	.projects-media--slide1 .projects-media__overlay.a1-slide1-overlay-right{
+		left:auto !important;
+		right:12px !important;
+		top:4px !important;
+		bottom:auto !important;
+		transform:none !important;
+		width:min(420px, calc(100% - 24px)) !important;
+		max-width:calc(100% - 24px) !important;
+	}
+
+	/* Canard DuckDNS centré (slide 2) */
+	.projects-media--duckdns .duckdns-duck{
+		display:block;
+		position:absolute;
+		left:50%;
+		top:50%;
+		transform:translate(-50%, -50%);
+		width:min(55%, 520px);
+		height:auto;
+		pointer-events:none;
+		z-index:1; /* sous l’overlay, au-dessus du fond */
 	}
 }
 
-/* ===================================================== */
-/* Slide 1 : Assemblage (image + overlay)                 */
-/* ===================================================== */
-/* (Slide 1 utilise : .projects-media + .project-a1-carousel__img + overlay) */
+/* =====================================================================
+   Mobile < 760px : plus compact + wrap + afficher le canard
+======================================================================== */
+@media (max-width: 760px){
+	.projects-media__overlay{
+		padding:8px 10px;
+	}
+	.projects-media__list{
+		font-size:0.85rem;
+	}
+	.projet-a1__stack-inline{
+		flex-wrap:wrap;
+	}
 
-/* ===================================================== */
-/* Slide 2 : DuckDNS (fond dégradé + logo + overlay)      */
-/* ===================================================== */
-.projects-media--duckdns {
-	height: 100%;
-	background:
-		linear-gradient(180deg, rgba(2, 6, 23, 0.55), rgba(2, 6, 23, 0.55)),
-		radial-gradient(1200px 500px at 20% 0%, rgba(56, 189, 248, 0.35), transparent 60%),
-		radial-gradient(900px 500px at 80% 100%, rgba(29, 78, 216, 0.30), transparent 55%);
-}
-
-/* ===================================================== */
-/* Slide 3 : Setup (liste en overlay + icônes centrées)   */
-/* ===================================================== */
-
-/* Fond slide 3 : wallpaper Raspberry (chemin relatif Angular assets) */
-.projects-media--setup {
-	height: 100%;
-	background-image:
-		linear-gradient(180deg, rgba(2, 6, 23, 0.55), rgba(2, 6, 23, 0.55)),
-		url("/src/assets/ProjetA1/Raspberry_wallpaper.png");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-
-/* Conteneur du bloc d'icônes : centré horizontalement (largeur) + verticalement */
-.projet-a1__stack-wrap {
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 50%;
-	transform: translateY(-50%);
-
-	/* centre le contenu (la stack) en largeur */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-    /* ✅ contraste : petite "bande" sombre derrière la stack
-	   (sinon les "+" se perdent sur le fond) */
-	background: linear-gradient(90deg, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.55) 18%, rgba(2, 6, 23, 0.55) 82%, rgba(2, 6, 23, 0) 100%);
-
-	/* optionnel : un peu d'air */
-	padding: 8px 10px;
-}
-
-/* Stack d'icônes (dans le wrap centré) */
-.projet-a1__stack {
-	display: flex;
-	align-items: flex-start; /* pour aligner les labels */
-	justify-content: center;
-	flex-wrap: wrap;
-	gap: 10px;
-}
-
-.projet-a1__stack-item {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	min-width: 64px;
-}
-
-.projet-a1__stack-icon {
-	width: 28px;
-	height: 28px;
-	display: block;
-}
-
-.projet-a1__stack-label {
-	margin-top: 6px;
-	font-size: 0.8rem;
-	font-weight: 800;
-	color: rgba(248, 250, 252, 0.9);
-	letter-spacing: 0.02em;
-}
-
-.projet-a1__stack-plus {
-	line-height: 28px; /* aligne le "+" avec l’icône */
-	font-size: 1.1rem;
-	font-weight: 900;
-	color: rgba(248, 250, 252, 0.75);
-	margin: 0 2px;
-}
-
-/* (Legacy) Si tu n'utilises plus .projet-a1__setup-icons, tu peux le supprimer */
-.projet-a1__setup-icons {
-	display: none;
+	/* Slide 2 : afficher le canard aussi sur petits écrans */
+	.projects-media--duckdns .duckdns-duck{
+		display:block;
+		position:absolute;
+		left:50%;
+		top:50%;
+		transform:translate(-50%, -50%);
+		width:min(70%, 260px); /* taille mobile */
+		height:auto;
+		pointer-events:none;
+		z-index:1;
+	}
 }

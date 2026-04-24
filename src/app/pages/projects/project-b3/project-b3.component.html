@@ -1,0 +1,179 @@
+<section class="projet-b3 py-5">
+	<div class="container">
+		<!-- Titre -->
+		<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+			<div>
+				<h2 class="mb-1">B3 — ChocoBoom</h2>
+				<p class="text-muted mb-0">Projet AFPA — HTML + CSS.</p>
+			</div>
+			<a class="btn btn-gradient btn-rainbow-underline projet-b3__back" [routerLink]="['/projects']">← Retour aux projets</a>
+		</div>
+
+		<div class="row g-4">
+			<!-- Col gauche : résumé -->
+			<div class="col-12 col-lg-5">
+				<div class="card shadow-sm">
+					<div class="card-header projet-b3__header">Résumé</div>
+
+					<!-- Image principale (provisoire) -->
+					<img src="assets/ProjetB3/logo.png" class="card-img-top" alt="Projet B3 — ChocoBoom" />
+
+					<div class="card-body">
+						<div class="mb-3">
+							<h6 class="text-uppercase text-muted mb-2">Contexte</h6>
+							<p class="mb-0">
+								Création d’une <strong>page d’accueil vitrine</strong> pour la chocolaterie fictive <strong>ChocoBoom</strong> afin de travailler la structure HTML,
+								la mise en page CSS et le responsive.
+							</p>
+						</div>
+
+						<div class="mb-3">
+							<h6 class="text-uppercase text-muted mb-2">Objectifs</h6>
+							<ul class="mb-0">
+								<li>Header + navigation (logo + menu 3 liens)</li>
+                                <li>Contenu principal : section + aside (texte + visuel + blocs d’infos)</li>
+                                <li>Responsive (desktop 2 colonnes → tablette en colonne → mobile sans aside)</li>
+                                <li>Style & interactions : couleurs du modèle + transition au survol du menu</li>
+							</ul>
+						</div>
+
+						<br />
+
+						<h6 class="text-uppercase text-muted">Stack</h6>
+						<div class="d-flex align-items-center flex-wrap gap-2 mb-3 stack-icons" aria-label="Stack technique">
+							<img class="stack-icon" src="assets/Icones/HTML5.svg" alt="HTML5" />
+							<span class="stack-plus" aria-hidden="true">+</span>
+							<img class="stack-icon" src="assets/Icones/CSS3.svg" alt="CSS3" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Col droite : carrousel -->
+			<div class="col-12 col-lg-7">
+				<div class="card shadow-sm h-100 projet-b3__steps-card">
+					<div class="card-header projet-b3__header">Étapes / Visuels</div>
+
+					<div class="card-body projet-b3__steps-body">
+						<div
+							id="carousel-projet-b3"
+							class="carousel slide shadow projet-b3__carousel"
+							data-bs-ride="carousel"
+							data-bs-touch="true"
+						>
+							<div class="carousel-inner">
+								<!-- Slide 1 -->
+								<div class="carousel-item active">
+									<div class="projects-media">
+										<img
+											src="assets/ProjetB3/Background_ChocoBoom.jpg"
+											class="d-block w-100 project-b3-carousel__img"
+											alt="B3 — ChocoBoom (fond)"
+										/>
+
+										<div class="projects-media__overlay projects-media__overlay--center slide1-overlay">
+											<h6 class="projects-media__title">ChocoBoom — page d’accueil</h6>
+											<ul class="projects-media__list">
+												<li><strong>But :</strong> site vitrine “ChocoBoom” (chocolaterie) — exercice responsive en HTML/CSS</li>
+                                                <li><strong>Contenu :</strong> header + navigation (logo + 3 liens), contenu principal (section + aside)</li>
+                                                <li><strong>Mise en page :</strong> Flexbox, alignements, espacements, centrage</li>
+                                                <li><strong>Responsive :</strong> desktop (2 colonnes) → tablette (1 colonne) → mobile (aside masqué)</li>
+                                                <li><strong>Stack :</strong> HTML5 + CSS3 (media queries + transitions)</li>
+
+
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<!-- Slide 2 -->
+								<div class="carousel-item">
+									<div class="projects-media">
+										<img
+											src="assets/ProjetB3/Background_HTML5.png"
+											class="d-block w-100 project-b3-carousel__img"
+											alt="B3 — HTML5 (fond)"
+										/>
+
+										<div class="projects-media__overlay projects-media__overlay--center slide2-overlay">
+											<h6 class="projects-media__title">HTML5 — structure & imports</h6>
+
+											<ul class="projects-media__list">
+												<li>Structure sémantique HTML5 : <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code></li>
+                                                <li>Meta viewport pour le responsive : <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></li>
+                                                <li>Liaison des styles : <code>&lt;link rel="stylesheet" href="css/normalize.css"&gt;</code> + <code>&lt;link rel="stylesheet" href="css/style.css"&gt;</code></li>
+                                                <li>Intégration d’assets : images (<code>&lt;img ... alt="..."&gt;</code>) + favicon</li>
+                                                <li>Navigation par liens : <code>&lt;a href="..."&gt;</code></li>
+                                                <li>Sélecteurs pour le CSS : <code>class</code> et <code>id</code> (ex : <code>class="container"</code>, <code>id="logo"</code>)</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<!-- Slide 3 -->
+								<div class="carousel-item">
+									<div class="projects-media">
+										<img
+											src="assets/ProjetB3/Background_CSS3.png"
+											class="d-block w-100 project-b3-carousel__img"
+											alt="B3 — CSS3 (fond)"
+										/>
+
+										<div class="projects-media__overlay projects-media__overlay--center slide3-overlay">
+											<h6 class="projects-media__title">CSS — structure & imports</h6>
+											<ul class="projects-media__list">
+												<li>Mise en page responsive avec <strong>media queries</strong> (<code>&#64;media (max-width: 960px)</code>, <code>&#64;media (max-width: 560px)</code>)</li>
+                                                <li>Disposition avec <strong>Flexbox</strong> (<code>display: flex</code>, <code>flex: 1</code>, <code>flex-direction</code>, centrage)</li>
+                                                <li>Variables CSS pour les couleurs : <code>:root</code> + <code>--bg-page</code>, etc. + <code>var(...)</code></li>
+                                                <li>Centrage / largeur de contenu : <code>max-width</code> + <code>margin: 0 auto</code></li>
+                                                <li>Gestion des tailles avec <code>box-sizing: border-box</code> (sur <code>*</code>, <code>*::before</code>, <code>*::after</code>)</li>
+                                                <li>Typographie : <code>font-family</code>, <code>font-size</code></li>
+                                                <li>Effets : <strong>transition</strong> sur le menu (<code>transition: background-color 0.6s ease</code>) + <code>:hover</code></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+                                <!-- Slide 4 -->
+                                <div class="carousel-item">
+                                    <div class="projects-media projects-media--slide4">
+                                        <img
+                                            src="assets/ProjetB3/emoji-damien.png"
+                                            class="d-block w-100 project-b3-carousel__img"
+                                            alt="B3 — Récap & ressources"
+                                        />
+
+                                        <div class="projects-media__overlay projects-media__overlay--bottom slide4-overlay">
+                                            <h6 class="projects-media__title">ChocoBoom</h6>
+                                            <ul class="projects-media__list">
+                                                    <li> <strong>Flexbox</strong> : layout desktop 70/30 + nav en 3 “cases” (display: flex, flex:1, align-items, justify-content, gap)</li>
+                                                    <li> <strong>Responsive</strong> : &#64;media (max-width: 960px) (aside sous section), &#64;media (max-width: 560px) (aside masqué)</li>
+                                                    <li> <strong>Effets</strong> : hover + transition (menu : background-color 0.6s ease vers #a79189)</li>
+                                                    <li> <strong>Organisation</strong> : variables CSS (:root) + normalize.css + classes réutilisées (.container)</li>
+                                                    <li> <strong>AFPA</strong> : TP responsive “ChocoBoom”</li>
+                                                    <li> <strong>GitHub</strong> : code disponible —
+                                                        <a href="https://github.com/DamZ59/ChocoBoom" target="_blank" rel="noopener noreferrer">voir le repo</a>
+                                                    </li>
+                                                    <li>TP complet sur <a href="https://damienvdh59250.duckdns.org">https://damienvdh59250.duckdns.org</a></li>
+                                                </ul>
+                                        </div>
+                                    </div>
+                                </div>
+							</div>
+							<!-- /carousel-inner -->
+
+							<button class="carousel-control-prev" type="button" data-bs-target="#carousel-projet-b3" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button class="carousel-control-next" type="button" data-bs-target="#carousel-projet-b3" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+						<!-- /carousel -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

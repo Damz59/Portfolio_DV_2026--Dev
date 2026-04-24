@@ -19,7 +19,9 @@
 			<div class="col-12 col-lg-5">
 				<div class="card shadow-sm">
 					<div class="card-header projet-a1__header">Résumé</div>
+
 					<img src="assets/ProjetA1/Raspberry_PI.jpg" class="card-img-top" alt="Raspberry Pi" />
+
 					<div class="card-body">
 						<p>
 							Transformer un Raspberry Pi en serveur web capable d’héberger une application front React (Vite),
@@ -50,11 +52,9 @@
 
 			<!-- Col droite : carrousel "média" -->
 			<div class="col-12 col-lg-7">
-				<!-- On garde h-100 pour aligner la hauteur avec la card de gauche -->
 				<div class="card shadow-sm h-100 projet-a1__steps-card">
 					<div class="card-header projet-a1__header">Étapes / Visuels</div>
 
-					<!-- Body spécial (flex) pour que le carousel prenne toute la hauteur restante -->
 					<div class="card-body projet-a1__steps-body">
 						<div
 							id="carousel-projet-a1"
@@ -63,16 +63,17 @@
 							data-bs-touch="true"
 						>
 							<div class="carousel-inner">
-								<!-- Slide 1 : Assemblage + overlay -->
+								<!-- Slide 1 : Assemblage + overlay (même hauteur/structure que Slide 2) -->
 								<div class="carousel-item active" data-bs-interval="2500">
-									<div class="projects-media">
+									<div class="projects-media projects-media--slide1">
 										<img
 											src="assets/ProjetA1/Raspberry_Assemblage.jpg"
-											class="d-block w-100 project-a1-carousel__img"
-											alt="Raspberry Pi — Assemblage"
+											class="duckdns-bg"
+											alt=""
+											aria-hidden="true"
 										/>
 
-										<div class="projects-media__overlay">
+										<div class="projects-media__overlay a1-slide1-overlay-right">
 											<h6 class="projects-media__title">Matériel</h6>
 											<ul class="projects-media__list">
 												<li>Raspberry Pi (Pi 4 / Pi 5)</li>
@@ -85,11 +86,21 @@
 									</div>
 								</div>
 
-								<!-- Slide 2 : DuckDNS (image + overlay) -->
+								<!-- Slide 2 : DuckDNS (fond + canard + overlay) -->
 								<div class="carousel-item">
 									<div class="projects-media projects-media--duckdns">
-										<!-- Logo DuckDNS (mets ton fichier dans src/assets/Icones/) -->
-										<img src="assets/Icones/Duckdns.svg" class="d-block w-100 project-a1-carousel__img" alt="DuckDNS" />
+										<img
+											src="assets/ProjetA1/Background_Duckdns.jpg"
+											class="duckdns-bg"
+											alt=""
+											aria-hidden="true"
+										/>
+										<img
+											src="assets/ProjetA1/duckdns.png"
+											class="duckdns-duck"
+											alt=""
+											aria-hidden="true"
+										/>
 
 										<div class="projects-media__overlay">
 											<h6 class="projects-media__title">DuckDNS</h6>
@@ -102,71 +113,66 @@
 									</div>
 								</div>
 
-								<!-- Slide 3 : Setup (PHP / MariaDB / SSH / VNC) -->
+								<!-- Slide 3 : Setup (icônes en ligne + overlay) (même hauteur/structure que Slide 2) -->
 								<div class="carousel-item">
 									<div class="projects-media projects-media--setup">
-										<!-- Bloc 1 (liste) : reste dans l’overlay, en haut à gauche -->
-										<div class="projects-media__overlay">
-											<h6 class="projects-media__title">Installation / Accès</h6>
+										<img
+											src="assets/ProjetA1/emoji-damien.png"
+											class="duckdns-bg"
+											alt=""
+											aria-hidden="true"
+										/>
 
+										<!-- Ligne d’icônes -->
+										<div class="projet-a1__stack-inline" aria-label="Stack installation">
+											<img src="assets/Icones/Raspberry.svg" alt="Raspbian" />
+											<span class="projet-a1__stack-sep" aria-hidden="true">=</span>
+											<img src="assets/Icones/PHP.svg" alt="PHP" />
+											<span class="projet-a1__stack-sep" aria-hidden="true">+</span>
+											<img src="assets/Icones/MariaDB.svg" alt="MariaDB" />
+											<span class="projet-a1__stack-sep" aria-hidden="true">+</span>
+											<img src="assets/Icones/SSH.svg" alt="SSH" />
+											<span class="projet-a1__stack-sep" aria-hidden="true">+</span>
+											<img src="assets/Icones/VNC.svg" alt="VNC" />
+										</div>
+
+										<!-- Overlay (liste) -->
+										<div class="projects-media__overlay projects-media__overlay--bottom">
+											<h6 class="projects-media__title">Installation / Accès</h6>
 											<ul class="projects-media__list">
 												<li><strong>SSH</strong> : connexion distante + sécurisation (clé, ports, firewall)</li>
 												<li><strong>PHP</strong> : installation + modules nécessaires + config Apache</li>
 												<li><strong>MariaDB</strong> : installation, users, droits, dump/restore</li>
 												<li><strong>VNC</strong> (bonus) : accès bureau à distance si besoin</li>
-												<li><strong>Box/Routeur</strong> : ouvrir/rediriger les ports <strong>80</strong> (HTTP) et <strong>443</strong> (HTTPS) vers le Raspberry</li>
+												<li><strong>Box/Routeur</strong> : rediriger les ports <strong>80</strong> et <strong>443</strong> vers le Raspberry</li>
 											</ul>
-										</div>
-
-										<!-- Bloc 2 (icônes) : séparé de l’overlay, centré au milieu -->
-										<div class="projet-a1__stack-wrap" aria-label="Stack installation">
-											<div class="projet-a1__stack">
-                                                <div class="projet-a1__stack-item">
-													<img src="assets/Icones/Raspberry.svg" alt="Raspbian" class="projet-a1__stack-icon" />
-													<div class="projet-a1__stack-label">Raspbian</div>
-												</div>
-
-												<div class="projet-a1__stack-plus" aria-hidden="true">=</div>
-												<div class="projet-a1__stack-item">
-													<img src="assets/Icones/PHP.svg" alt="PHP" class="projet-a1__stack-icon" />
-													<div class="projet-a1__stack-label">PHP</div>
-												</div>
-
-												<div class="projet-a1__stack-plus" aria-hidden="true">+</div>
-
-												<div class="projet-a1__stack-item">
-													<img src="assets/Icones/MariaDB.svg" alt="MariaDB" class="projet-a1__stack-icon" />
-													<div class="projet-a1__stack-label">MariaDB</div>
-												</div>
-
-												<div class="projet-a1__stack-plus" aria-hidden="true">+</div>
-
-												<div class="projet-a1__stack-item">
-													<img src="assets/Icones/SSH.svg" alt="SSH" class="projet-a1__stack-icon" />
-													<div class="projet-a1__stack-label">SSH</div>
-												</div>
-
-												<div class="projet-a1__stack-plus" aria-hidden="true">+</div>
-
-												<div class="projet-a1__stack-item">
-													<img src="assets/Icones/VNC.svg" alt="VNC" class="projet-a1__stack-icon" />
-													<div class="projet-a1__stack-label">VNC</div>
-												</div>
-											</div>
 										</div>
 									</div>
 								</div>
 							</div>
+							<!-- /carousel-inner -->
 
-							<button class="carousel-control-prev" type="button" data-bs-target="#carousel-projet-a1" data-bs-slide="prev">
+							<button
+								class="carousel-control-prev"
+								type="button"
+								data-bs-target="#carousel-projet-a1"
+								data-bs-slide="prev"
+							>
 								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 								<span class="visually-hidden">Previous</span>
 							</button>
-							<button class="carousel-control-next" type="button" data-bs-target="#carousel-projet-a1" data-bs-slide="next">
+
+							<button
+								class="carousel-control-next"
+								type="button"
+								data-bs-target="#carousel-projet-a1"
+								data-bs-slide="next"
+							>
 								<span class="carousel-control-next-icon" aria-hidden="true"></span>
 								<span class="visually-hidden">Next</span>
 							</button>
 						</div>
+						<!-- /carousel -->
 					</div>
 				</div>
 			</div>

@@ -1,233 +1,234 @@
 /* =====================================================================
-    1) Header des cards (bandeau en haut)
-    - Texte clair, gras, fond dégradé "dark → bleu"
-    - Petite bordure en bas pour séparer du contenu
-   ===================================================================== */
-.projet-b1__header {
+   1) Header des cards (bandeau en haut)
+   - Texte clair, gras, fond dégradé "dark → bleu"
+   - Petite bordure en bas pour séparer du contenu
+===================================================================== */
+.projet-b1__header{
 	/* Couleur du texte */
-	color: #f8fafc;
-
+	color:#f8fafc;
 	/* Donne du poids au titre */
-	font-weight: 900;
-
+	font-weight:900;
 	/* Dégradé (cohérent avec le style global du portfolio) */
-	background: linear-gradient(135deg, #0b1220 0%, #0f172a 45%, #1d4ed8 100%);
-
+	background:linear-gradient(135deg,#0b1220 0%,#0f172a 45%,#1d4ed8 100%);
 	/* Séparation subtile entre header et body */
-	border-bottom: 1px solid rgba(56, 189, 248, 0.18);
+	border-bottom:1px solid rgba(56,189,248,0.18);
 }
 
 /* =====================================================================
-    2) Bouton "Retour aux projets"
-    - Même style visuel que le header (cohérence)
-    - Bordure légère + petit boost au hover
-   ===================================================================== */
-.projet-b1__back {
+   2) Bouton "Retour aux projets"
+   - Même style visuel que le header (cohérence)
+   - Bordure légère + petit boost au hover
+===================================================================== */
+.projet-b1__back{
 	/* Texte blanc */
-	color: #f8fafc;
-
+	color:#f8fafc;
 	/* Un peu moins gras que le header, mais toujours "CTA" */
-	font-weight: 800;
-
+	font-weight:800;
 	/* Dégradé identique au header */
-	background: linear-gradient(135deg, #0b1220 0%, #0f172a 45%, #1d4ed8 100%);
-
+	background:linear-gradient(135deg,#0b1220 0%,#0f172a 45%,#1d4ed8 100%);
 	/* Bordure légèrement bleutée */
-	border: 1px solid rgba(56, 189, 248, 0.22);
+	border:1px solid rgba(56,189,248,0.22);
 }
 
 /* Hover : léger éclaircissement */
-.projet-b1__back:hover {
-	color: #f8fafc;
-	filter: brightness(1.05);
+.projet-b1__back:hover{
+	color:#f8fafc;
+	filter:brightness(1.05);
 }
 
 /* =====================================================================
-    3) Card "Étapes / Visuels" en layout flex (colonne)
-    Objectif : éviter le "vide" et forcer le body à prendre la hauteur
-    restante, pour que le carousel puisse être full height.
-   ===================================================================== */
-.projet-b1__steps-card {
+   3) Card "Étapes / Visuels" en layout flex (colonne)
+   Objectif : éviter le "vide" et forcer le body à prendre la hauteur
+   restante, pour que le carousel puisse être full height.
+===================================================================== */
+.projet-b1__steps-card{
 	/* La card devient un conteneur flex en colonne */
-	display: flex;
-	flex-direction: column;
+	display:flex;
+	flex-direction:column;
 }
 
-.projet-b1__steps-body {
+.projet-b1__steps-body{
 	/* Prend l'espace restant sous le header */
-	flex: 1;
-
+	flex:1;
 	/* Permet au carousel à l'intérieur de grandir verticalement */
-	display: flex;
-	flex-direction: column;
-
+	display:flex;
+	flex-direction:column;
 	/* Important pour que les enfants flex puissent "shrink" correctement */
-	min-height: 0;
+	min-height:0;
 }
 
 /* =====================================================================
-    4) Carousel en pleine hauteur
-    - On veut que le carousel remplisse le body de la card.
-   ===================================================================== */
-.projet-b1__carousel {
+   4) Carousel en pleine hauteur
+   - On veut que le carousel remplisse le body de la card.
+===================================================================== */
+.projet-b1__carousel{
 	/* Le carousel prend la place disponible dans le body */
-	flex: 1;
-
+	flex:1;
 	/* Idem : évite les comportements bizarres de hauteur en flex */
-	min-height: 0;
+	min-height:0;
 }
 
 /* Les wrappers internes du carousel prennent 100% de la hauteur */
 .projet-b1__carousel .carousel-inner,
-.projet-b1__carousel .carousel-item {
-	height: 100%;
+.projet-b1__carousel .carousel-item{
+	height:100%;
 }
 
 /* =====================================================================
-    5) Conteneur média (image + overlay)
-    - Position relative pour pouvoir placer l’overlay en absolute.
-   ===================================================================== */
-.projects-media {
-	position: relative;
-	height: 100%;
+   5) Conteneur média (image + overlay)
+   - Position relative pour pouvoir placer l’overlay en absolute.
+===================================================================== */
+.projects-media{
+	position:relative;
+	height:100%;
 }
 
 /* =====================================================================
-    6) Image du carousel
-    - Toujours remplir le cadre
-    - Crop propre via object-fit: cover
-   ===================================================================== */
-.project-b1-carousel__img {
+   6) Image du carousel
+   - Toujours remplir le cadre
+   - Crop propre via object-fit: cover
+===================================================================== */
+.project-b1-carousel__img{
 	/* Remplit le conteneur */
-	width: 100%;
-	height: 100%;
-
+	width:100%;
+	height:100%;
 	/* Recadrage propre sans déformation */
-	object-fit: cover;
-
+	object-fit:cover;
 	/* Centre le point d’intérêt */
-	object-position: 50% 50%;
-
+	object-position:50% 50%;
 	/* Évite les petits espaces inline des images */
-	display: block;
+	display:block;
 }
 
 /* Sécurité : on désactive toute limite de hauteur qui pourrait venir d'ailleurs */
-.projet-b1__carousel img {
-	max-height: none;
+.projet-b1__carousel img{
+	max-height:none;
 }
 
-.project-b1-carousel__img--contain {
-	object-fit: contain;     /* affiche toute l’image */
-	background: rgba(2, 6, 23, 0.35); /* optionnel : évite les bandes “vides” trop dures */
+.project-b1-carousel__img--contain{
+	object-fit:contain; /* affiche toute l’image */
+	background:rgba(2,6,23,0.35); /* optionnel : évite les bandes “vides” trop dures */
 }
 
-/* Wrapper plein écran au-dessus de l'image */
-.slide5-overlay-wrap {
-	position: absolute;
-	inset: 0;
-	display: flex;
-	align-items: flex-end;      /* en bas */
-	justify-content: center;    /* centré horizontalement */
-	padding: 0 12px 16px;       /* marge bas */
-	pointer-events: none;       /* optionnel: ne bloque pas le swipe/clic */
+/* Wrapper plein écran au-dessus de l'image (slide 5) */
+.slide5-overlay-wrap{
+	position:absolute;
+	inset:0;
+	display:flex;
+	align-items:flex-end; /* en bas */
+	justify-content:center; /* centré horizontalement */
+	padding:0 12px 16px; /* marge bas */
+	pointer-events:none; /* optionnel: ne bloque pas le swipe/clic */
 }
 
-/* Le cadre lui-même (reste “normal”, juste dimensionné) */
-.slide5-overlay {
-	position: static !important;     /* annule le absolute du style de base */
-	width: min(680px, 100%);
-	max-width: none !important;
-	text-align: center;
-	pointer-events: auto;            /* optionnel: permet de cliquer le lien */
+/* Le cadre lui-même (slide 5) */
+.slide5-overlay{
+	position:static !important; /* annule le absolute du style de base */
+	width:min(680px, 100%);
+	max-width:none !important;
+	text-align:center;
+	pointer-events:auto; /* optionnel: permet de cliquer le lien */
 }
 
 /* =====================================================================
     7) Overlay (texte par-dessus l’image)
     - Boîte sombre translucide + blur
-    - Padding + arrondis + ombre
-   ===================================================================== */
-.projects-media__overlay {
+   - Padding + arrondis + ombre
+===================================================================== */
+.projects-media__overlay{
 	/* Se place au-dessus de l’image */
-	position: absolute;
-
+	position:absolute;
 	/* Position "coin haut gauche" avec marges */
-	left: 12px;
-	top: 4px;
-
+	left:12px;
+	top:4px;
 	/* Empêche de dépasser sur petits écrans */
-	max-width: calc(100% - 24px);
-
+	max-width:calc(100% - 24px);
 	/* Confort de lecture */
-	padding: 10px 12px;
-	border-radius: 12px;
-
+	padding:10px 12px;
+	border-radius:12px;
 	/* Fond sombre transparent */
-	background: rgba(2, 6, 23, 0.72);
-
+	background:rgba(2,6,23,0.72);
 	/* Effet "verre dépoli" (selon support navigateur) */
-	backdrop-filter: blur(4px);
-
+	backdrop-filter:blur(4px);
 	/* Texte clair */
-	color: #f8fafc;
-
+	color:#f8fafc;
 	/* L’overlay ressort sur l’image */
-	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+	box-shadow:0 10px 25px rgba(0,0,0,0.25);
 }
 
-.projects-media__overlay--center {
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-
+.projects-media__overlay--center{
+	left:50%;
+	top:50%;
+	transform:translate(-50%, -50%);
 	/* optionnel mais conseillé pour un rendu propre */
-	text-align: center;
-	width: min(560px, calc(100% - 24px)); /* largeur max + marges sur mobile */
+	text-align:center;
+	width:min(560px, calc(100% - 24px)); /* largeur max + marges sur mobile */
 }
 
 /* Titre de l’overlay : style compact, "label" */
-.projects-media__title {
-	margin: 0 0 6px 0;
-	font-size: 0.85rem;
-	font-weight: 800;
-	letter-spacing: 0.04em;
-	text-transform: uppercase;
-	color: rgba(248, 250, 252, 0.9);
+.projects-media__title{
+	margin:0 0 6px 0;
+	font-size:0.85rem;
+	font-weight:800;
+	letter-spacing:0.04em;
+	text-transform:uppercase;
+	color:rgba(248,250,252,0.9);
 }
 
 /* Liste de points dans l’overlay */
-.projects-media__list {
-	margin: 0;
-	padding-left: 18px;
-	font-size: 0.9rem;
-	line-height: 1.25;
+.projects-media__list{
+	margin:0;
+	padding-left:18px;
+	font-size:0.9rem;
+	line-height:1.25;
 }
 
- /* Icone de présentation */
-.stack-icon {
-	height: 40px; /* plus grand que 32px */
-	width: auto;
+/* Icones de présentation */
+.stack-icon{
+	height:40px; /* plus grand que 32px */
+	width:auto;
 }
 
-.stack-plus {
-	font-weight: 900;
-	font-size: 26px;
-	line-height: 1;
-	color: rgba(15, 23, 42, 0.65); /* adapte si tu veux plus clair/foncé */
+.stack-plus{
+	font-weight:900;
+	font-size:26px;
+	line-height:1;
+	color:rgba(15,23,42,0.65); /* adapte si tu veux plus clair/foncé */
 }
 
 /* =====================================================================
-    8) Responsive (mobile)
-    - Overlay un peu plus compact
-    - Texte un peu plus petit
-   ===================================================================== */
-@media (max-width: 576px) {
-	.projects-media__overlay {
-		left: 8px;
-		top: 4px;
-		padding: 8px 10px;
+    8) Responsive (mobile/tablette)
+    - À <760px : l’overlay passe SOUS l’image (plus de texte par-dessus)
+======================================================================== */
+@media (max-width: 760px){
+
+	/* Slides “classiques” uniquement (on exclut la slide 5) */
+	.projet-b1__carousel .projects-media:not(.projects-media--slide5){
+		display: flex !important;
+		flex-direction: column !important;
+		height: auto !important;
 	}
-	.projects-media__list {
-		font-size: 0.85rem;
+
+	/* Image : hauteur naturelle */
+	.projet-b1__carousel .projects-media:not(.projects-media--slide5) > img{
+		height: auto !important;
+	}
+
+	/* Overlay : passe sous l’image (plus en absolute) */
+	.projet-b1__carousel .projects-media:not(.projects-media--slide5) .projects-media__overlay,
+	.projet-b1__carousel .projects-media:not(.projects-media--slide5) .projects-media__overlay--center,
+	.projet-b1__carousel .projects-media:not(.projects-media--slide5) .projects-media__overlay--bottom{
+		position: static !important;
+		inset: auto !important;
+		left: auto !important;
+		top: auto !important;
+		right: auto !important;
+		bottom: auto !important;
+		transform: none !important;
+
+		width: 100% !important;
+		max-width: 100% !important;
+		margin: 0 !important;
+		border-radius: 0 0 12px 12px;
 	}
 }

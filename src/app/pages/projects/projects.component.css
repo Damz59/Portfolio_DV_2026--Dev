@@ -81,6 +81,7 @@
 	object-fit: cover;
 }
 
+
 @media (max-width: 992px) {
 	/* Tablette : 2 cards */
 	.projects-cards-carousel__cards {

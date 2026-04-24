@@ -1,0 +1,195 @@
+<section class="projet-b2 py-5">
+	<div class="container">
+		<!-- Titre -->
+		<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+			<div>
+				<h2 class="mb-1">B2 — ShoeSplash</h2>
+				<p class="text-muted mb-0">Projet AFPA — HTML + CSS.</p>
+			</div>
+			<a class="btn btn-gradient btn-rainbow-underline projet-b2__back" [routerLink]="['/projects']">← Retour aux projets</a>
+		</div>
+
+		<div class="row g-4">
+			<!-- Col gauche : résumé -->
+			<div class="col-12 col-lg-5">
+				<div class="card shadow-sm">
+					<div class="card-header projet-b2__header">Résumé</div>
+
+					<!-- Image principale (provisoire) -->
+					<img src="assets/ProjetB2/logo.jpg" class="card-img-top" alt="Projet B2 — ShoeSplash" />
+
+					<div class="card-body">
+						<div class="mb-3">
+							<h6 class="text-uppercase text-muted mb-2">Contexte</h6>
+							<p class="mb-0">
+								Création d’une <strong>page d’accueil vitrine</strong> pour le magasin fictif <strong>ShoeSplash</strong> afin de travailler la structure HTML,
+								la mise en page CSS et le responsive.
+							</p>
+						</div>
+
+						<div class="mb-3">
+							<h6 class="text-uppercase text-muted mb-2">Objectifs</h6>
+							<ul class="mb-0">
+								<li>Header + navigation</li>
+								<li>Sections (mise en avant produits / catégories / infos)</li>
+								<li>Responsive (mobile → desktop)</li>
+							</ul>
+						</div>
+
+						<br />
+
+						<h6 class="text-uppercase text-muted">Stack</h6>
+						<div class="d-flex align-items-center flex-wrap gap-2 mb-3 stack-icons" aria-label="Stack technique">
+							<img class="stack-icon" src="assets/Icones/HTML5.svg" alt="HTML5" />
+							<span class="stack-plus" aria-hidden="true">+</span>
+							<img class="stack-icon" src="assets/Icones/CSS3.svg" alt="CSS3" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Col droite : carrousel -->
+			<div class="col-12 col-lg-7">
+				<div class="card shadow-sm h-100 projet-b2__steps-card">
+					<div class="card-header projet-b2__header">Étapes / Visuels</div>
+
+					<div class="card-body projet-b2__steps-body">
+						<div
+							id="carousel-projet-b2"
+							class="carousel slide shadow projet-b2__carousel"
+							data-bs-ride="carousel"
+							data-bs-touch="true"
+						>
+							<div class="carousel-inner">
+								<!-- Slide 1 -->
+								<div class="carousel-item active">
+									<div class="projects-media">
+										<img
+											src="assets/ProjetB2/Background_ShoeSplash.png"
+											class="d-block w-100 project-b2-carousel__img"
+											alt="B2 — ShoeSplash (fond)"
+										/>
+
+										<div class="projects-media__overlay projects-media__overlay--center slide1-overlay">
+											<h6 class="projects-media__title">ShoeSplash — page d’accueil</h6>
+											<ul class="projects-media__list">
+												<li><strong>But :</strong> vitrine d’un magasin de chaussures (HTML/CSS)</li>
+												<li><strong>Contenu :</strong> header + navigation, sections (produits / catégories / infos)</li>
+												<li><strong>Mise en page :</strong> flexbox, alignements, espacements</li>
+												<li><strong>Responsive :</strong> mobile → desktop</li>
+												<li><strong>Stack :</strong> HTML5 + CSS3</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<!-- Slide 2 -->
+								<div class="carousel-item">
+									<div class="projects-media">
+										<img
+											src="assets/ProjetB2/Background_HTML5.png"
+											class="d-block w-100 project-b2-carousel__img"
+											alt="B2 — HTML5 (fond)"
+										/>
+
+										<div class="projects-media__overlay projects-media__overlay--center slide2-overlay">
+											<h6 class="projects-media__title">HTML5 — structure & imports</h6>
+
+											<ul class="projects-media__list">
+												<li><strong>HTML5</strong> : balises sémantiques header, nav, main, section, article, footer</li>
+												<li>
+													<strong>Liens CSS</strong> (dans le head) :
+													<br />
+													&lt;link rel="stylesheet" href="css/normalize.css"&gt; (Normalize.css)
+													<br />
+													&lt;link rel="stylesheet" href="css/style.css"&gt; (ta CSS)
+												</li>
+												<li><strong>Google Fonts</strong> : import de la police Courgette (fonts.googleapis.com / fonts.gstatic.com)</li>
+												<li>
+													<strong>Font Awesome</strong> : import via link cdnjs, puis utilisation :
+													<br />
+													&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;, &lt;i class="fa fa-lock"&gt;&lt;/i&gt;, etc.
+												</li>
+												<li>
+													<strong>Classes / IDs</strong> :
+													<br />
+													classes : container, topbar, left, right, clear, escarpin
+													<br />
+													ids : cart, slider, select, news, new, best, crush, info, bottombar
+												</li>
+												<li><strong>Images</strong> : img src="..." + alt (présent sur le logo, vide sur les autres images)</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<!-- Slide 3 -->
+								<div class="carousel-item">
+									<div class="projects-media">
+										<img
+											src="assets/ProjetB2/Background_CSS3.png"
+											class="d-block w-100 project-b2-carousel__img"
+											alt="B2 — CSS3 (fond)"
+										/>
+
+										<div class="projects-media__overlay projects-media__overlay--center slide3-overlay">
+											<h6 class="projects-media__title">CSS — structure & imports</h6>
+											<ul class="projects-media__list">
+												<li><strong>Flexbox</strong> : display: flex, align-items, justify-content, gap</li>
+												<li><strong>Positionnement</strong> : position relative/absolute (ex : panier)</li>
+												<li><strong>Responsive</strong> : &#64;media (max-width: 576px)</li>
+                                                <li><strong>Effets</strong> : hover, transitions (boutons, cartes, images)</li>
+                                                <li><strong>Organisation</strong> : classes réutilisables + variables CSS</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+                                <!-- Slide 4 -->
+                                <div class="carousel-item">
+                                    <div class="projects-media projects-media--slide4">
+                                        <img
+                                            src="assets/ProjetB2/emoji-damien.png"
+                                            class="d-block w-100 project-b2-carousel__img"
+                                            alt="B2 — Récap & ressources"
+                                        />
+
+                                        <div class="projects-media__overlay projects-media__overlay--bottom slide4-overlay">
+                                            <h6 class="projects-media__title">ShoeSplash</h6>
+                                            <ul class="projects-media__list">
+                                                <li>🧩 <strong>Flexbox</strong> : display: flex, align-items, justify-content, gap</li>
+                                                <li>📐 <strong>Positionnement</strong> : position relative/absolute (ex : panier)</li>
+                                                <li>📱 <strong>Responsive</strong> : &#64;media (max-width: 576px)</li>
+                                                <li>✨ <strong>Effets</strong> : hover, transitions (boutons, cartes, images)</li>
+                                                <li>🧱 <strong>Organisation</strong> : classes réutilisables + variables CSS</li>
+                                                <li>🎓 <strong>AFPA</strong> : TP réalisé à l’AFPA</li>
+                                                <li>
+                                                    🐙 <strong>GitHub</strong> : code disponible —
+                                                    <a href="https://github.com/DamZ59/ShoeSplash" target="_blank" rel="noopener noreferrer">voir le repo</a>
+                                                </li>
+                                                <li>
+                                                    📚 <strong>Cours complet</strong> :
+                                                    <a href="https://damienvdh59250.duckdns.org" target="_blank" rel="noopener noreferrer">damienvdh59250.duckdns.org</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+							</div>
+							<!-- /carousel-inner -->
+
+							<button class="carousel-control-prev" type="button" data-bs-target="#carousel-projet-b2" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button class="carousel-control-next" type="button" data-bs-target="#carousel-projet-b2" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+						<!-- /carousel -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
