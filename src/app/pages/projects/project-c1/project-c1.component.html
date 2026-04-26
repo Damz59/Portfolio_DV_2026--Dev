@@ -1,0 +1,194 @@
+<section class="projet-c1 py-5">
+	<div class="container">
+		<!-- Titre -->
+		<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+			<div>
+				<h2 class="mb-1">Apprenez à programmer en JavaScript</h2>
+				<p class="text-muted mb-0">JavaScript / Frontend</p>
+			</div>
+
+			<a class="btn btn-gradient btn-rainbow-underline projet-c1__back" routerLink="/projects">
+				← Retour aux projets
+			</a>
+		</div>
+
+		<!-- 2 colonnes -->
+		<div class="row g-4 align-items-stretch">
+			<!-- Col gauche -->
+			<div class="col-12 col-lg-5">
+				<div class="card shadow-sm h-100">
+					<div class="card-header projet-c1__header">Résumé</div>
+
+					<img src="assets/ProjetC1/JavaScript_Acceuil_OC.png" class="card-img-top" alt="Image résumé" />
+
+					<div class="card-body">
+						<p>
+							TP de mise en pratique JavaScript : manipulation des données (variables, objets, tableaux), écriture de la logique
+							(conditions, boucles, fonctions), interaction avec une page web (DOM + événements), puis création d’un formulaire
+							avec récupération des valeurs, validation et affichage d’erreurs.
+						</p>
+
+						<h6 class="text-uppercase text-muted">Stack</h6>
+						<div class="d-flex align-items-center flex-wrap gap-2 mb-3" aria-label="Stack technique">
+							<img src="assets/Icones/HTML5.svg" alt="HTML" height="22" />
+							<span class="projet-c1__stack-plus" aria-hidden="true">+</span>
+							<img src="assets/Icones/CSS3.svg" alt="CSS" height="22" />
+							<span class="projet-c1__stack-plus" aria-hidden="true">+</span>
+							<img src="assets/Icones/JavaScript.svg" alt="JavaScript" height="22" />
+						</div>
+
+						<h6 class="text-uppercase text-muted">Outils</h6>
+						<ul class="projet-c1__materials mb-0">
+							<li><strong>IDE</strong> : VS Code</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Col droite : Étapes / Visuels -->
+			<div class="col-12 col-lg-7">
+				<div class="card shadow-sm h-100 projet-c1__steps-card">
+					<div class="card-header projet-c1__header">Étapes / Visuels</div>
+
+					<div class="card-body projet-c1__steps-body">
+						<div
+							id="carousel-projet-c1"
+							class="carousel slide shadow projet-c1__carousel"
+							data-bs-ride="carousel"
+							data-bs-touch="true"
+						>
+							<div class="carousel-inner">
+								<!-- Slide 1 -->
+								<div class="carousel-item active">
+									<div class="projects-media projects-media--slide1">
+										<img
+											src="assets/ProjetC1/Background_Slide01.jpg"
+											class="projet-c1__slide-bg"
+											alt=""
+											aria-hidden="true"
+										/>
+
+										<div class="projects-media__overlay projects-media__overlay--bottom">
+											<h6 class="projects-media__title">Partie 1 — Manipulez des données avec JavaScript</h6>
+											<ul class="projects-media__list">
+												<li><strong>Déclarez une variable</strong></li>
+												<li><strong>Modifiez une variable</strong></li>
+												<li><strong>Structurez des données grâce aux objets</strong></li>
+												<li><strong>Regroupez des données grâce aux tableaux</strong></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<!-- Slide 2 : Partie 2 — Écrivez votre premier fichier JavaScript -->
+                                <div class="carousel-item">
+                                    <div class="projects-media projects-media--slide2">
+                                        <img
+                                            src="assets/ProjetC1/Background_Slide02.jpg"
+                                            class="projet-c1__slide-bg"
+                                            alt=""
+                                            aria-hidden="true"
+                                        />
+
+                                        <div class="projects-media__overlay projects-media__overlay--top">
+                                            <h6 class="projects-media__title">Partie 2 — Écrivez votre premier fichier JavaScript</h6>
+
+                                            <ul class="projects-media__list">
+                                                <li><strong>Appréhendez la logique de programmation</strong></li>
+                                                <li><strong>Contrôlez du code grâce aux conditions</strong></li>
+                                                <li><strong>Répétez du code grâce aux boucles</strong></li>
+                                                <li><strong>Organisez votre code grâce aux fonctions</strong></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+								<!-- Slide 3 : Partie 3 — Faites interagir JavaScript avec une page web -->
+                                <div class="carousel-item">
+                                    <div class="projects-media projects-media--slide3">
+                                        <img
+                                            src="assets/ProjetC1/Background_Slide03.jpg"
+                                            class="projet-c1__slide-bg"
+                                            alt=""
+                                            aria-hidden="true"
+                                        />
+
+                                        <div class="projects-media__overlay projects-media__overlay--bottom">
+                                            <h6 class="projects-media__title">Partie 3 — Faites interagir JavaScript avec une page web</h6>
+
+                                            <ul class="projects-media__list">
+                                                <li><strong>Récupérez un élément d’une page web</strong></li>
+                                                <li><strong>Modifiez un élément d’une page web</strong></li>
+                                                <li><strong>Créez un nouvel élément dans une page web</strong></li>
+                                                <li><strong>Interagissez avec un élément grâce aux événements</strong></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+								<!-- Slide 4 : Partie 4 — Créez un formulaire de saisie de données -->
+                                <div class="carousel-item">
+                                    <div class="projects-media projects-media--slide4">
+                                        <img
+                                            src="assets/ProjetC1/Background_Slide04.png"
+                                            class="projet-c1__slide-bg"
+                                            alt=""
+                                            aria-hidden="true"
+                                        />
+
+                                        <div class="projects-media__overlay projects-media__overlay--bottom">
+                                            <h6 class="projects-media__title">Partie 4 — Créez un formulaire de saisie de données</h6>
+
+                                            <ul class="projects-media__list">
+                                                <li><strong>Récupérez la valeur d’un champ de formulaire</strong></li>
+                                                <li><strong>Soumettez votre formulaire</strong></li>
+                                                <li><strong>Mettez en place des règles de validation</strong></li>
+                                                <li><strong>Affichez un message d’erreur</strong></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+								<!-- Slide 5 -->
+								<div class="carousel-item">
+									<div class="projects-media projects-media--slide6">
+										<img
+											src="assets/ProjetC1/emoji-damien.png"
+											class="projet-c1__slide-bg"
+											alt=""
+											aria-hidden="true"
+										/>
+										<div class="projects-media__overlay projects-media__overlay--bottom">
+                                            <h6 class="projects-media__title">Récapitulatif / Liens</h6>
+
+                                            <ul class="projects-media__list">
+                                                <li><strong>Résumé</strong> : TP JavaScript complet (données, logique, DOM/événements, formulaire + validation).</li>
+                                                <li>
+                                                    <strong>OpenClassRooms</strong> :
+                                                    https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript
+                                                </li>
+                                                <li><strong>Mon site web</strong> : https://damienvdh59250.duckdns.org</li>
+                                            </ul>
+                                        </div>
+									</div>
+								</div>
+							</div>
+							<!-- /carousel-inner -->
+
+							<button class="carousel-control-prev" type="button" data-bs-target="#carousel-projet-c1" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+
+							<button class="carousel-control-next" type="button" data-bs-target="#carousel-projet-c1" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+						<!-- /carousel -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

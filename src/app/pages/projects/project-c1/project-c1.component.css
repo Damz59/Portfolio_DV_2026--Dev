@@ -1,0 +1,224 @@
+/* =====================================================================
+   C1 — Header / bouton
+======================================================================== */
+.projet-c1__header{
+	color:#f8fafc;
+	font-weight:900;
+	background:linear-gradient(135deg,#0b1220 0%,#0f172a 45%,#1d4ed8 100%);
+	border-bottom:1px solid rgba(56,189,248,0.18);
+}
+
+.projet-c1__back{
+	color:#f8fafc;
+	font-weight:800;
+	background:linear-gradient(135deg,#0b1220 0%,#0f172a 45%,#1d4ed8 100%);
+	border:1px solid rgba(56,189,248,0.22);
+}
+.projet-c1__back:hover{
+	color:#f8fafc;
+	filter:brightness(1.05);
+}
+
+/* (optionnel) petite mise en forme de la liste outils */
+.projet-c1__materials{
+	padding-left:18px;
+	margin:0;
+}
+
+/* =====================================================================
+   C1 — Card steps (carousel full height)
+======================================================================== */
+.projet-c1__steps-card{
+	height:100%;
+	display:flex;
+	flex-direction:column;
+}
+
+.projet-c1__steps-body{
+	flex:1;
+	display:flex;
+	flex-direction:column;
+	min-height:0;
+}
+
+.projet-c1__carousel{
+	flex:1;
+	min-height:0;
+	height:100%;
+}
+
+.projet-c1__carousel .carousel-inner,
+.projet-c1__carousel .carousel-item{
+	height:100%;
+}
+
+/* =====================================================================
+   Media wrapper (mobile-first)
+======================================================================== */
+.projects-media{
+	display:flex;
+	flex-direction:column;
+	height:auto;
+}
+
+/* =====================================================================
+   Fond des slides (C1)
+======================================================================== */
+.projet-c1__slide-bg{
+	width:100%;
+	height:auto; /* mobile */
+	display:block;
+	object-fit:cover;
+	background:#0b1220;
+}
+
+/* =====================================================================
+   Overlay (mobile-first) : SOUS l'image
+======================================================================== */
+.projects-media__overlay{
+	position:static;
+	width:100%;
+	max-width:100%;
+	margin:0;
+	padding:10px 12px;
+	border-radius:0 0 12px 12px;
+	background:rgba(2,6,23,0.72);
+	backdrop-filter:blur(4px);
+	color:#f8fafc;
+	box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+.projects-media__overlay--center,
+.projects-media__overlay--bottom{
+	transform:none;
+	width:100%;
+	text-align:left;
+}
+
+.projects-media__title{
+	margin:0 0 6px 0;
+	font-size:0.85rem;
+	font-weight:800;
+	letter-spacing:0.04em;
+	text-transform:uppercase;
+	color:rgba(248,250,252,0.9);
+}
+
+.projects-media__list{
+	margin:0;
+	padding-left:18px;
+	font-size:0.9rem;
+	line-height:1.25;
+}
+
+/* =====================================================================
+   Slide : barre d’icônes (C1)
+======================================================================== */
+.projet-c1__stack-inline{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	gap:10px;
+	padding:10px 12px;
+	background:rgba(2,6,23,0.55);
+	color:#f8fafc;
+	border-top:1px solid rgba(56,189,248,0.12);
+	border-bottom:1px solid rgba(56,189,248,0.12);
+}
+.projet-c1__stack-inline img{
+	height:26px;
+	width:auto;
+	display:block;
+}
+.projet-c1__stack-sep{
+	font-weight:900;
+	opacity:0.75;
+	font-size:22px;
+	line-height:1;
+}
+
+/* =====================================================================
+   Desktop ≥ 760px : fond plein cadre + overlay sur l'image
+======================================================================== */
+@media (min-width: 760px){
+	.projects-media{
+		position:relative;
+		display:block;
+		height:100%;
+		overflow:hidden;
+	}
+
+	.projet-c1__slide-bg{
+		position:absolute;
+		inset:0;
+		width:100%;
+		height:100%;
+		object-fit:cover;
+		z-index:0;
+	}
+
+	.projects-media::before{
+		content:"";
+		position:absolute;
+		inset:0;
+		background:rgba(2,6,23,.25);
+		pointer-events:none;
+		z-index:0;
+	}
+
+	.projects-media__overlay{
+		position:absolute;
+		left:12px;
+		top:4px;
+		width:auto;
+		max-width:calc(100% - 24px);
+		border-radius:12px;
+		z-index:2;
+	}
+
+	.projects-media__overlay--center{
+		left:50%;
+		top:50%;
+		transform:translate(-50%, -50%);
+		text-align:center;
+		width:min(560px, calc(100% - 24px));
+	}
+
+	.projects-media__overlay--bottom{
+		left:50%;
+		top:auto;
+		bottom:16px;
+		transform:translateX(-50%);
+		text-align:center;
+		width:min(560px, calc(100% - 24px));
+	}
+
+	/* sécurité : si tu utilises projects-media--slide1 */
+	.projects-media--slide1 .projects-media__overlay{
+		top:auto;
+		bottom:16px;
+		left:50%;
+		transform:translateX(-50%);
+		text-align:center;
+		width:min(560px, calc(100% - 24px));
+	}
+
+	.projet-c1__stack-inline{
+		position:absolute;
+		left:0;
+		right:0;
+		bottom:0;
+		border-top:0;
+		border-bottom:0;
+		z-index:2;
+	}
+}
+
+/* =====================================================================
+   Mobile < 760px : plus compact
+======================================================================== */
+@media (max-width: 760px){
+	.projects-media__overlay{ padding:8px 10px; }
+	.projects-media__list{ font-size:0.85rem; }
+	.projet-c1__stack-inline{ flex-wrap:wrap; }
+}

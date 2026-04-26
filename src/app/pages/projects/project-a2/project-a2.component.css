@@ -1,0 +1,247 @@
+/* =====================================================================
+   A2 — Header / bouton
+======================================================================== */
+.projet-a2__header{
+	color:#f8fafc;
+	font-weight:900;
+	background:linear-gradient(135deg,#0b1220 0%,#0f172a 45%,#1d4ed8 100%);
+	border-bottom:1px solid rgba(56,189,248,0.18);
+}
+
+.projet-a2__back{
+	color:#f8fafc;
+	font-weight:800;
+	background:linear-gradient(135deg,#0b1220 0%,#0f172a 45%,#1d4ed8 100%);
+	border:1px solid rgba(56,189,248,0.22);
+}
+.projet-a2__back:hover{
+	color:#f8fafc;
+	filter:brightness(1.05);
+}
+
+/* =====================================================================
+   A2 — Card steps (carousel full height)
+======================================================================== */
+.projet-a2__steps-card{
+	height:100%;
+	display:flex;
+	flex-direction:column;
+}
+
+.projet-a2__steps-body{
+	flex:1;
+	display:flex;
+	flex-direction:column;
+	min-height:0;
+}
+
+.projet-a2__carousel{
+	flex:1;
+	min-height:0;
+	height:100%;
+}
+
+.projet-a2__carousel .carousel-inner,
+.projet-a2__carousel .carousel-item{
+	height:100%;
+}
+
+/* =====================================================================
+   Media wrapper (mobile-first)
+   - Mobile : image puis overlay (en dessous)
+======================================================================== */
+.projects-media{
+	display:flex;
+	flex-direction:column;
+	height:auto;
+}
+
+/* =====================================================================
+   Fond des slides (A2)
+======================================================================== */
+.projet-a2__slide-bg{
+	width:100%;
+	height:auto;          /* mobile */
+	display:block;
+	object-fit:cover;
+	background:#0b1220;   /* fallback */
+}
+
+/* =====================================================================
+   Overlay (mobile-first) : SOUS l'image
+======================================================================== */
+.projects-media__overlay{
+	position:static;
+	width:100%;
+	max-width:100%;
+	margin:0;
+	padding:10px 12px;
+	border-radius:0 0 12px 12px;
+	background:rgba(2,6,23,0.72);
+	backdrop-filter:blur(4px);
+	color:#f8fafc;
+	box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+.projects-media__overlay--center,
+.projects-media__overlay--bottom{
+	transform:none;
+	width:100%;
+	text-align:left;
+}
+
+.projects-media__title{
+	margin:0 0 6px 0;
+	font-size:0.85rem;
+	font-weight:800;
+	letter-spacing:0.04em;
+	text-transform:uppercase;
+	color:rgba(248,250,252,0.9);
+}
+
+.projects-media__list{
+	margin:0;
+	padding-left:18px;
+	font-size:0.9rem;
+	line-height:1.25;
+}
+
+/* =====================================================================
+   Slide 3 : barre d’icônes (A2)
+======================================================================== */
+.projet-a2__stack-inline{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	gap:10px;
+	padding:10px 12px;
+	background:rgba(2,6,23,0.55);
+	color:#f8fafc;
+	border-top:1px solid rgba(56,189,248,0.12);
+	border-bottom:1px solid rgba(56,189,248,0.12);
+}
+.projet-a2__stack-inline img{
+	height:26px;
+	width:auto;
+	display:block;
+}
+.projet-a2__stack-sep{
+	font-weight:900;
+	opacity:0.75;
+	font-size:22px;
+	line-height:1;
+}
+
+/* =====================================================================
+   Logo PHP (slide backend)
+======================================================================== */
+.projects-media--backend .php-elephant{
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%, -50%);
+	width:min(45%, 420px);
+	height:auto;
+	opacity:0.95;
+	pointer-events:none;
+	z-index:1; /* au-dessus du fond, sous l’overlay */
+}
+
+/* =====================================================================
+   Desktop ≥ 760px : fond plein cadre + overlay sur l'image
+======================================================================== */
+@media (min-width: 760px){
+	.projects-media{
+		position:relative;
+		display:block;
+		height:100%;
+		overflow:hidden;
+	}
+
+	/* fond remplit toute la slide */
+	.projet-a2__slide-bg{
+		position:absolute;
+		inset:0;
+		width:100%;
+		height:100%;
+		object-fit:cover;
+		z-index:0;
+	}
+
+	/* voile sombre léger pour lisibilité */
+	.projects-media::before{
+		content:"";
+		position:absolute;
+		inset:0;
+		background:rgba(2,6,23,.25);
+		pointer-events:none;
+		z-index:0;
+	}
+
+	/* overlay repasse sur l'image */
+	.projects-media__overlay{
+		position:absolute;
+		left:12px;
+		top:4px;
+		width:auto;
+		max-width:calc(100% - 24px);
+		border-radius:12px;
+		z-index:2;
+	}
+
+	.projects-media__overlay--center{
+		left:50%;
+		top:50%;
+		transform:translate(-50%, -50%);
+		text-align:center;
+		width:min(560px, calc(100% - 24px));
+	}
+
+	.projects-media__overlay--bottom{
+		left:50%;
+		top:auto;
+		bottom:16px;
+		transform:translateX(-50%);
+		text-align:center;
+		width:min(560px, calc(100% - 24px));
+	}
+
+	/* Slide 1 : overlay en bas (sécurité, même si tu changes de variante) */
+	.projects-media--slide1 .projects-media__overlay{
+		top:auto;
+		bottom:16px;
+		left:50%;
+		transform:translateX(-50%);
+		text-align:center;
+		width:min(560px, calc(100% - 24px));
+	}
+
+	/* barre d'icônes au-dessus du fond (slide 3) */
+	.projet-a2__stack-inline{
+		position:absolute;
+		left:0;
+		right:0;
+		bottom:0;
+		border-top:0;
+		border-bottom:0;
+		z-index:2;
+	}
+}
+
+/* =====================================================================
+   Mobile < 760px : plus compact
+======================================================================== */
+@media (max-width: 760px){
+	.projects-media__overlay{
+		padding:8px 10px;
+	}
+	.projects-media__list{
+		font-size:0.85rem;
+	}
+	.projet-a2__stack-inline{
+		flex-wrap:wrap;
+	}
+	.projects-media--backend .php-elephant{
+		width:min(60%, 240px);
+	}
+}

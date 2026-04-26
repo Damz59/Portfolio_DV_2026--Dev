@@ -81,6 +81,36 @@
 	object-fit: cover;
 }
 
+/* SDBM : l'image remplit tout l'emplacement (sans bandes) */
+.project-card__img-cover{
+	width:100%;
+	height:170px;              /* même hauteur que .card-img-top */
+	object-fit:cover;
+	object-position:center;
+	display:block;
+	background:transparent;
+}
+
+/* Afficher l'image en entier dans les cards du carousel */
+.project-card__img-contain{
+	width: 100%;
+	height: 170px;                 /* même hauteur que .card-img-top pour garder l’alignement */
+	object-fit: contain !important;
+	object-position: center !important;
+	background: rgba(2,6,23,.08);
+	display: block;
+}
+
+/* C1 : image plein cadre (sans bandes/marges) */
+.project-card__img-cover{
+	width: 100%;
+	height: 170px;            /* même hauteur que .card-img-top */
+	object-fit: cover;
+	object-position: center;
+	display: block;
+	background: transparent;
+}
+
 
 @media (max-width: 992px) {
 	/* Tablette : 2 cards */

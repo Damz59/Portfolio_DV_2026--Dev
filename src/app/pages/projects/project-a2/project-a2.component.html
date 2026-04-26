@@ -1,0 +1,198 @@
+<section class="projet-a2 py-5">
+	<div class="container">
+		<!-- Titre -->
+		<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+			<div>
+				<h2 class="mb-1">Application Web Mon site personnel</h2>
+				<p class="text-muted mb-0">
+					Projet Personnel — Developpement d'un site Web dynamique fullstack (React/Vite + PHP API + MariaDB + Apache2).
+				</p>
+			</div>
+
+			<a class="btn btn-gradient btn-rainbow-underline projet-a2__back" routerLink="/projects">
+				← Retour aux projets
+			</a>
+		</div>
+
+		<!-- IMPORTANT : align-items-stretch + h-100 sur les 2 cards = même hauteur -->
+		<div class="row g-4 align-items-stretch">
+			<!-- Col gauche : résumé + stack -->
+			<div class="col-12 col-lg-5">
+				<div class="card shadow-sm h-100">
+					<div class="card-header projet-a2__header">Résumé</div>
+
+					<img src="assets/ProjetA2/Background_Acceuil.png" class="card-img-top" alt="Acceuil Site Web" />
+
+					<div class="card-body">
+						<p>
+							Application web auto‑hébergée sur un Raspberry Pi : le site affiche un bandeau d’annonces pour les nouveautés,
+							génère un CV dynamique (contenu mis à jour facilement), et propose une gestion des utilisateurs
+							(inscription/connexion, droits & accès). Une fois connecté, l’utilisateur peut accéder à des contenus réservés,
+							notamment la mise à disposition des cours pour les inscrits.
+						</p>
+
+						<h6 class="text-uppercase text-muted">Stack</h6>
+						<div class="d-flex align-items-center flex-wrap gap-2 mb-3" aria-label="Stack technique">
+							<img src="assets/Icones/Raspberry.svg" alt="Raspberry Pi" height="22" />
+							<img src="assets/Icones/React.svg" alt="React" height="22" />
+							<img src="assets/Icones/Vite.svg" alt="Vite" height="22" />
+							<img src="assets/Icones/PHP.svg" alt="PHP" height="22" />
+							<img src="assets/Icones/MariaDB.svg" alt="MariaDB" height="22" />
+							<img src="assets/Icones/Apache.svg" alt="Apache" height="22" />
+						</div>
+
+						<h6 class="text-uppercase text-muted">Outils</h6>
+						<ul class="projet-a2__materials mb-0">
+							<li><strong>Framework</strong> : React + Vite</li>
+							<li><strong>IDE</strong> : VS Code</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Col droite : carrousel "média" -->
+			<div class="col-12 col-lg-7">
+				<div class="card shadow-sm h-100 projet-a2__steps-card">
+					<div class="card-header projet-a2__header">Étapes / Visuels</div>
+
+					<div class="card-body projet-a2__steps-body">
+						<div
+							id="carousel-projet-a2"
+							class="carousel slide shadow projet-a2__carousel"
+							data-bs-ride="carousel"
+							data-bs-touch="true"
+						>
+							<div class="carousel-inner">
+								<!-- Slide 1 : Frontend -->
+								<div class="carousel-item active" data-bs-interval="2500">
+									<div class="projects-media projects-media--slide1">
+										<img
+											src="assets/ProjetA2/Background_Frontend.jpg"
+											class="projet-a2__slide-bg"
+											alt=""
+											aria-hidden="true"
+										/>
+
+										<div class="projects-media__overlay projects-media__overlay--bottom">
+											<h6 class="projects-media__title">Frontend — React (Vite)</h6>
+											<ul class="projects-media__list">
+												<li><strong>Navigation</strong> : application SPA avec routing (pages Accueil, CV, Cours, Espace membre).</li>
+												<li><strong>Interface</strong> : composants réutilisables, design responsive (mobile/desktop) + UI claire.</li>
+												<li><strong>Contenu dynamique</strong> : bandeau d’annonces + sections qui se mettent à jour sans recharger la page.</li>
+												<li><strong>Authentification</strong> : connexion/inscription, affichage conditionnel selon droits & accès.</li>
+												<li><strong>Accès membres</strong> : téléchargement/consultation des cours réservés aux inscrits.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<!-- Slide 2 : Backend PHP -->
+								<div class="carousel-item">
+									<div class="projects-media projects-media--backend">
+										<img
+											src="assets/ProjetA2/Background_Code.png"
+											class="projet-a2__slide-bg"
+											alt=""
+											aria-hidden="true"
+										/>
+
+										<img
+											src="assets/Icones/php-elephant.svg"
+											class="php-elephant"
+											alt=""
+											aria-hidden="true"
+										/>
+
+										<div class="projects-media__overlay projects-media__overlay--bottom">
+											<h6 class="projects-media__title">Backend PHP</h6>
+											<ul class="projects-media__list">
+												<li><strong>API PHP</strong> : endpoints REST (CRUD), échanges JSON, validation des données.</li>
+												<li><strong>Sécurité</strong> : sessions/cookies, gestion des droits (accès public vs espace membre).</li>
+												<li><strong>Base de données</strong> : MariaDB/MySQL, données persistantes (utilisateurs + contenus).</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+                                <!-- Slide 3 : BDD -->
+								<div class="carousel-item" data-bs-interval="2500">
+									<div class="projects-media projects-media--slide1">
+										<img
+                                            src="assets/ProjetA2/Background_BDD.jpg"
+                                            class="projet-a2__slide-bg"
+                                            alt=""
+                                            aria-hidden="true"
+                                        />
+
+										<div class="projects-media__overlay projects-media__overlay--bottom">
+                                            <h6 class="projects-media__title">Base de données — MariaDB (phpMyAdmin)</h6>
+                                            <ul class="projects-media__list">
+                                                <li><strong>Données persistantes</strong> : utilisateurs, annonces, cours et contenus du site.</li>
+                                                <li><strong>Relationnel</strong> : tables + relations (IDs), requêtes SQL pour lire/écrire les infos.</li>
+                                                <li><strong>Administration</strong> : gestion via <strong>phpMyAdmin</strong> (CRUD, import/export, sauvegardes).</li>
+                                            </ul>
+                                        </div>
+									</div>
+								</div>
+
+								<!-- Slide 4 : Installation / Accès -->
+								<div class="carousel-item">
+									<div class="projects-media projects-media--setup">
+										<img
+											src="assets/ProjetA2/emoji-damien.png"
+											class="projet-a2__slide-bg"
+											alt=""
+											aria-hidden="true"
+										/>
+
+										<!-- Ligne d’icônes -->
+										<div class="projet-a2__stack-inline" aria-label="Stack installation">
+											<img src="assets/Icones/React.svg" alt="React" />
+											<span class="projet-a2__stack-sep" aria-hidden="true">+</span>
+											<img src="assets/Icones/PHP.svg" alt="PHP" />
+											<span class="projet-a2__stack-sep" aria-hidden="true">+</span>
+											<img src="assets/Icones/MariaDB.svg" alt="MariaDB" />
+										</div>
+
+										<!-- Overlay -->
+										<div class="projects-media__overlay projects-media__overlay--bottom">
+											<h6 class="projects-media__title">Installation / Accès</h6>
+											<ul class="projects-media__list">
+												<li><strong>Raspberry</strong> : Raspbian + SSH/VNC, installation Apache2 + sécurisation de base (firewall, ports).</li>
+												<li><strong>Frontend</strong> : React (Vite) — interface web responsive, appels API et affichage dynamique des données.</li>
+												<li><strong>Backend</strong> : PHP (API REST) — endpoints CRUD, validation des entrées, gestion des erreurs, échanges JSON.</li>
+												<li><strong>Base de données</strong> : MariaDB/MySQL — schéma relationnel, tables + relations, requêtes SQL, données persistantes.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /carousel-inner -->
+
+							<button
+								class="carousel-control-prev"
+								type="button"
+								data-bs-target="#carousel-projet-a2"
+								data-bs-slide="prev"
+							>
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+
+							<button
+								class="carousel-control-next"
+								type="button"
+								data-bs-target="#carousel-projet-a2"
+								data-bs-slide="next"
+							>
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+						<!-- /carousel -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

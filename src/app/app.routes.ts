@@ -6,9 +6,12 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SkillsComponent } from './pages/skills/skills.component';
 import { ProjectA1Component } from './pages/projects/project-a1/project-a1.component';
+import { ProjectA2Component } from './pages/projects/project-a2/project-a2.component';
 import { ProjectB1Component } from './pages/projects/project-b1/project-b1.component';
 import { ProjectB2Component } from './pages/projects/project-b2/project-b2.component';
 import { ProjectB3Component } from './pages/projects/project-b3/project-b3.component';
+import { ProjectC1Component } from './pages/projects/project-c1/project-c1.component';
+
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -17,8 +20,10 @@ export const routes: Routes = [
     { path: 'contact', component: ContactComponent},
     { path: "skills", component: SkillsComponent},
     { path: 'projects/a1', component: ProjectA1Component },
+    { path: 'projects/a2', component: ProjectA2Component },
     { path: 'projects/b1', component: ProjectB1Component },
     { path: 'projects/b2', component: ProjectB2Component },
     { path: 'projects/b3', component: ProjectB3Component },
+    { path: 'projects/c1', component: ProjectC1Component },
     { path: '**', redirectTo: '' },
 ];
