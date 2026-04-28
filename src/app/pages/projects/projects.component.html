@@ -244,7 +244,6 @@
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<div class="projects-cards-carousel__cards">
-							<!-- FIX : il manquait le "<" -->
 							<div class="card">
 								<div class="card-header projects-card__header">JavaScript</div>
 								<img src="assets/ProjetC1/JavaScript_Acceuil_OC.png" class="card-img-top project-card__img-contain" alt="Projet Azertype" />
@@ -262,7 +261,17 @@
 							</div>
 
 							<div class="card">
-								<div class="card-body"><h5 class="card-title mb-0">Projet 2</h5></div>
+								<div class="card-header projects-card__header">ReactJs</div>
+								<img src="assets/ProjetC2/Acceuil_Maison_Jungle_OC.png" class="card-img-top project-card__img-contain" alt="Projet Maison Jungle" />
+								<div class="card-body d-flex flex-column">
+									<p class="card-text">
+										Apprendre à coder avec ReactJs : Un framework javaScript crée par la société Méta + création la page d'Acceuil du magasin "La Maison Jungle".
+									</p>
+									<div class="d-flex align-items-center flex-wrap gap-2 mb-3" aria-label="Stack technique">
+										<img src="assets/Icones/React.svg" alt="HTML" height="22" />
+									</div>
+									<a class="btn btn-gradient mt-auto btn-rainbow-underline" [routerLink]="['/projects/c2']">Voir le projet</a>
+								</div>
 							</div>
 
 							<div class="card">

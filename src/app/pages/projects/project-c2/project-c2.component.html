@@ -1,0 +1,161 @@
+<section class="projet-c2 py-5">
+	<div class="container">
+		<!-- Titre -->
+		<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+			<div>
+				<h2 class="mb-1">Apprenez à coder en ReactJs</h2>
+				<p class="text-muted mb-0">Les bases du framework ReactJs</p>
+			</div>
+
+			<a class="btn btn-gradient btn-rainbow-underline projet-c2__back" routerLink="/projects">
+				← Retour aux projets
+			</a>
+		</div>
+
+		<!-- 2 colonnes -->
+		<div class="row g-4 align-items-stretch">
+			<!-- Col gauche : résumé -->
+			<div class="col-12 col-lg-5">
+				<div class="card shadow-sm h-100">
+					<div class="card-header projet-c2__header">Résumé</div>
+
+					<img src="assets/ProjetC2/Acceuil_Maison_Jungle_OC.png" class="card-img-top" alt="Image résumé" />
+
+					<div class="card-body">
+						<p> Apprenez les bases du framework ReactJs au travers d'un exercice portant sur la page d'un magasin de plantes en lignes </p>
+
+						<h6 class="text-uppercase text-muted">Stack</h6>
+						<div class="d-flex align-items-center flex-wrap gap-2 mb-3" aria-label="Stack technique">
+                            <img src="assets/Icones/React.svg" alt="ReactJs" height="22" />
+                        </div>
+                            <h6 class="text-uppercase text-muted">Outils</h6>
+                            <ul class="projet-c2__materials mb-0">
+                                <li><strong>IDE</strong> : VS Code</li>
+                                <li><strong>Gestionnaire de paquets</strong> : npm</li>
+                                <li><strong>Versioning</strong> : Git / GitHub</li>
+                            </ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Col droite : carrousel 6 slides (vierges) -->
+			<div class="col-12 col-lg-7">
+				<div class="card shadow-sm h-100 projet-c2__steps-card">
+					<div class="card-header projet-c2__header">Étapes / Visuels</div>
+
+					<div class="card-body projet-c2__steps-body">
+						<div
+							id="carousel-projet-c2"
+							class="carousel slide shadow projet-c2__carousel"
+							data-bs-ride="carousel"
+							data-bs-touch="true"
+						>
+							<div class="carousel-inner">
+								<!-- Slide 1 -->
+								<div class="carousel-item active">
+									<div class="projects-media projects-media--slide1">
+										<img
+											src="assets/ProjetC2/Background_Slide01.jpg"
+											class="projet-c2__slide-bg"
+											alt=""
+											aria-hidden="true"
+										/>
+										<div class="projects-media__overlay projects-media__overlay--bottom">
+                                            <h6 class="projects-media__title">Partie 1 - Initiez-vous aux principes de React</h6>
+
+                                            <ul class="projects-media__list">
+                                                <li><strong>Appréhendez la logique de React</strong></li>
+                                                <li><strong>Écrivez du code modulaire avec les composants en JSX</strong></li>
+                                            </ul>
+                                        </div>
+									</div>
+								</div>
+
+								<!-- Slide 2 -->
+								<div class="carousel-item">
+									<div class="projects-media projects-media--slide2">
+										<img
+											src="assets/ProjetC2/Background_Slide02.jpg"
+											class="projet-c2__slide-bg"
+											alt=""
+											aria-hidden="true"
+										/>
+										<div class="projects-media__overlay projects-media__overlay--bottom">
+											<h6 class="projects-media__title">Partie 2 - Créez votre première application complète avec Create React App</h6>
+											<ul class="projects-media__list">
+												<li>Prenez en main Create React App</li>
+												<li>Incorporez du style et des assets à votre projet</li>
+												<li>Gagnez en temps et en efficacité grâce aux listes et aux conditions</li>
+                                                <li>Réutilisez vos composants avec les props</li>
+                                                <li>Interagissez avec vos composants grâce aux événements</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<!-- Slide 3 -->
+								<div class="carousel-item">
+									<div class="projects-media projects-media--slide3">
+										<img
+											src="assets/ProjetC2/Background_Slide03.jpg"
+											class="projet-c2__slide-bg"
+											alt=""
+											aria-hidden="true"
+										/>
+										<div class="projects-media__overlay projects-media__overlay--bottom">
+											<h6 class="projects-media__title">Partie 3 - Stockez et récupérez des données avec le state et les effets</h6>
+											<ul class="projects-media__list">
+												<li>Mettez en place votre state local avec useState</li>
+												<li>Partagez votre state entre différents composants</li>
+												<li>Déclenchez des effets avec useEffect</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<!-- Slide 4 -->
+								<div class="carousel-item">
+									<div class="projects-media projects-media--slide4">
+										<img
+											src="assets/ProjetC2/emoji-damien.png"
+											class="projet-c2__slide-bg"
+											alt=""
+											aria-hidden="true"
+										/>
+										<div class="projects-media__overlay projects-media__overlay--bottom">
+											<h6 class="projects-media__title">Partie 4 - Conclusion</h6>
+											<ul class="projects-media__list">
+												<li><strong>Bilan</strong> : mise en pratique des bases de React (composants, props, listes/conditions, événements, state).</li>
+												<li>
+													Cours complet sur :
+													<a href="https://openclassrooms.com/fr/courses/7008001-debutez-avec-react">
+														https://openclassrooms.com/fr/courses/7008001-debutez-avec-react
+													</a>
+												</li>
+												<li><strong>Prochaine étape</strong> : structurer l’app (composants réutilisables) et améliorer l’UI (styles, responsive).</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								
+							</div>
+							<!-- /carousel-inner -->
+
+							<button class="carousel-control-prev" type="button" data-bs-target="#carousel-projet-c2" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+
+							<button class="carousel-control-next" type="button" data-bs-target="#carousel-projet-c2" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+						<!-- /carousel -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

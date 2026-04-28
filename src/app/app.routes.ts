@@ -11,6 +11,7 @@ import { ProjectB1Component } from './pages/projects/project-b1/project-b1.compo
 import { ProjectB2Component } from './pages/projects/project-b2/project-b2.component';
 import { ProjectB3Component } from './pages/projects/project-b3/project-b3.component';
 import { ProjectC1Component } from './pages/projects/project-c1/project-c1.component';
+import { ProjectC2Component } from './pages/projects/project-c2/project-c2.component';
 
 
 export const routes: Routes = [
@@ -25,5 +26,6 @@ export const routes: Routes = [
     { path: 'projects/b2', component: ProjectB2Component },
     { path: 'projects/b3', component: ProjectB3Component },
     { path: 'projects/c1', component: ProjectC1Component },
+    { path: 'projects/c2', component: ProjectC2Component },
     { path: '**', redirectTo: '' },
 ];
