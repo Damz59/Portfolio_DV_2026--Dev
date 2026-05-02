@@ -1,1 +1,86 @@
-<p>contact works!</p>
+<div class="contact-page">
+	<section class="py-5">
+		<div class="container" style="max-width: 720px;">
+			<div class="contact-card">
+				<h1 class="mb-3">Contact</h1>
+				<p class="text-muted">
+					Envoie-moi un message via ce formulaire.
+				</p>
+
+				<form action="https://formspree.io/f/xlgzelwk" method="POST">
+					<!-- Option 2 : redirection après envoi -->
+					<input
+						type="hidden"
+						name="_next"
+						value="https://damz59.github.io/Portfolio_DV_2026--Build/contact?sent=1"
+					/>
+
+					<div class="mb-3">
+						<label class="form-label" for="contact-name">Nom</label>
+						<input
+							id="contact-name"
+							class="form-control"
+							type="text"
+							name="name"
+							autocomplete="name"
+							placeholder="Ton nom"
+							required
+						/>
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label" for="contact-email">Email</label>
+						<input
+							id="contact-email"
+							class="form-control"
+							type="email"
+							name="email"
+							autocomplete="email"
+							placeholder="ton.email@exemple.com"
+							required
+						/>
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label" for="contact-subject">Sujet</label>
+						<input
+							id="contact-subject"
+							class="form-control"
+							type="text"
+							name="subject"
+							placeholder="Ex : Demande de contact"
+							required
+						/>
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label" for="contact-message">Message</label>
+						<textarea
+							id="contact-message"
+							class="form-control"
+							name="message"
+							rows="6"
+							placeholder="Ton message..."
+							required
+						></textarea>
+					</div>
+
+					<div class="d-flex gap-2 align-items-center">
+						<button class="btn btn-primary" type="submit">Envoyer</button>
+
+						<a class="btn btn-outline-secondary" routerLink="/">
+							Retour
+						</a>
+					</div>
+				</form>
+
+				<hr class="my-4" />
+
+				<p class="small text-muted mb-0">
+					Ou contacte-moi directement :
+					<a href="mailto:damienvdh59@gmail.com">damienvdh59&#64;gmail.com</a>
+				</p>
+			</div>
+		</div>
+	</section>
+</div>
